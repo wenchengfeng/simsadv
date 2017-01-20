@@ -34,7 +34,9 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 来代表现在，如此一来，就只能用\ :math:`\(X_{t+k}\)`\ 来代表时间向后（
 :math:`\(k>0\)` ）或向前（ :math:`\(k<0\)` ）推进了。
 
- 宏观经济模型是随机的 Macroeconomic models are stochastic, in the sense
+
+宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用\ :math:`\(E(X_t)\)`\ 代表\ :math:`\(X_t\)`\ 的无条件预期。所谓无条件是指行为人对系统的现状一无所知。
+:math:`\(E_tX_{t+k}\)` Macroeconomic models are stochastic, in the sense
 that there is randomness in the realizationof variables. The stochastic
 nature of macro models comes in from exogenous variables, whichwe
 typically model as having a random component. Because these models are
