@@ -33,3 +33,19 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 :math:`\(t\)`
 来代表现在，如此一来，就只能用\ :math:`\(X_{t+k}\)`\ 来代表时间向后（
 :math:`\(k>0\)` ）或向前（ :math:`\(k<0\)` ）推进了。
+
+ 宏观经济模型是随机的 Macroeconomic models are stochastic, in the sense
+that there is randomness in the realizationof variables. The stochastic
+nature of macro models comes in from exogenous variables, whichwe
+typically model as having a random component. Because these models are
+stochastic, andbecause agents are forward-looking, we need to worry
+about expectations. E(Xt) refers to theunconditional expectation of Xt.
+By unconditional I mean knowing nothing about the currentstate of the
+system. EtXt+k refers to expectation of future realizations of X
+conditional on allinformation known at time t. By convention we have
+that EtXt = Xt: since Xt is known in periodt, there is no uncertainty
+over its realization. Also, :math:`E_tX_{t−k} = X_{t−k}`.
+
+For two arbitrary random variables, :math:`Y` and :math:`Z`, the Law of
+Iterated Expectaions says that E(Y ) =E(E(Y \| Z)). In words, this says
+that the unconditional expectation of
