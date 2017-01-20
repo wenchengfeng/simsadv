@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>预备知识 &mdash; advanced macro 0.1 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="advanced macro 0.1 文档" href="index.html"/>
+        <link rel="next" title="两时期消费-储蓄模型" href="02-consumption_saving.html"/>
+        <link rel="prev" title="高级宏观经济学学习笔记" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> advanced macro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">预备知识</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. 导论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. 符号系统与预期</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02-consumption_saving.html">两时期消费-储蓄模型</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">advanced macro</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>预备知识</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/01-preliminaries.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>预备知识<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 导论<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在进一步学习课程之前，本讲提供一些基础的“预备知识”。宏观经济学既是动态的，又是随机的。动态意味着我们必须时时追踪变量随时间的变化，而随机则意味着我们需要研究预期。因此，本讲将首先介绍一下符号系统及有关预期运算规则。接下来我们将介绍在宏观经济学中用到的随机过程—马尔可夫（
+Markov
+）过程及ARMA过程。然后我们讨论几个分析工具，这些工具将会在ARMA模型的框架中讨论，但是这些工具会有更广泛的应用，当我们学习经济模型时将会用到它们，如脉冲响应函数及方差分解等。我还将简要讨论一下关于“滤波”的基础知识。滤波是非常重要的，（因为存在趋势问题，）我们只有先把真实世界的数据转换后才能在经济模型的框架内开展分析。本讲最后将介绍卢卡斯批评（Lucas
+Critique），卢卡斯批评奠定了现代宏观经济学的基础。</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h2>2. 符号系统与预期<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>变量是某些可以（确定性地或随机地）改变的事物的实现。内生变量是指在模型“内部”决定的变量（即在均衡框架内根据决策规则通过优化问题推导出来的）。外生变量则是由模型“外部”决定的，通常是做为给定的因素。我们根据既定的外生变量，将其代入到模型中，模型运行的结果就是内生变量的实现。参数则是规制模型关系的数值（例如效用函数的曲度如何，决策行为人对未来效用流的折现倾向有多大，等等）。参数通常也被看作是外生且固定的，当然，模型中也可以设定参数为随机改变的，此时参数就变成是外生变量。我将采用拉丁字母（如<span class="math">\(X\)</span>， <span class="math">\(Y\)</span>）来表示变量，而用希腊字母（如<span class="math">\(\alpha, \beta\)</span> ）表示参数。当然我会尽量做到，只是可能会有偶尔有些例外。</p>
+<p>公式好苦恼</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02-consumption_saving.html" class="btn btn-neutral float-right" title="两时期消费-储蓄模型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="高级宏观经济学学习笔记" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Feng&amp;Duan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
