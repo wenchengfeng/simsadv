@@ -8,7 +8,7 @@
 
 ## 2. 符号系统与预期
 
-变量是某些可以（确定性地或随机地）改变的事物的实现。内生变量是指在模型“内部”决定的变量（即在均衡框架内根据决策规则通过优化问题推导出来的）。外生变量则是由模型“外部”决定的，通常是做为给定的因素。我们根据既定的外生变量，将其代入到模型中，模型运行的结果就是内生变量的实现。参数则是规制模型关系的数值（例如效用函数的曲度如何，决策行为人对未来效用流的折现倾向有多大，等等）。参数通常也被看作是外生且固定的，当然，模型中也可以设定参数为随机改变的，此时参数就变成是外生变量。我将采用拉丁字母（如$X$，$Y$）来表示变量，而用希腊字母（如$\alpha, \beta$）表示参数。我会尽量做到，只是可能偶尔会有些例外。
+变量是某些可以（确定性地或随机地）改变的事物的实现。内生变量是指在模型“内部”决定的变量（即在均衡框架内根据决策规则通过优化问题推导出来的）。外生变量则是由模型“外部”决定的，通常是做为给定的因素。我们根据既定的外生变量，将其代入到模型中，模型运行的结果就是内生变量的实现。参数则是规制模型关系的数值（例如效用函数的曲度如何，决策行为人对未来效用流的折现倾向有多大，等等）。参数通常也被看作是外生且固定的，当然，模型中也可以设定参数为随机改变的，此时参数就变成是外生变量。我将采用拉丁字母（如 $\(X\)$ ，$\(Y\)$）来表示变量，而用希腊字母（如 $\(\alpha, \beta\)$ ）表示参数。我会尽量做到，只是可能偶尔会有些例外。
 
 
 
@@ -16,28 +16,13 @@
 
 
 
-宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令$X_t$代表变量（可以内生的也可以是外生的，可以控制变量也可以是状态变量）。这个符号表示变量在是时间$t$的变量实现值。$X_{t-1}$则代表在$t$之前的一期变量实现值。\ :math:`\(X_{t+k}\)`\代表在$\(t\)$时期之后第$\(k\)$期的变量实现值，依此类推。
+宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令 $\(X_t\)$代表变量（可以内生的也可以是外生的，可以控制变量也可以是状态变量）。这个符号表示变量在是时间 $\(t\)$的变量实现值。$\(X_{t-1}\)$则代表在$\(t\)$之前的一期变量实现值。$\(X_{t+k}\)$ 代表在$\(t\)$时期之后第$\(k\)$期的变量实现值，依此类推。人们在使用时间标记符号时常常会有些翻来覆去的不一致情况，我也有这种情况（抱歉）。有时候，我们把时期0做为“现在”，然后向前推进时间；则在 $\(t=0,1,2,...\)$时的$\(X_t\)$代表的是当前（时期0）和今后的变量的实现值。在名外一些时候，我们用时期 $\(t\)$ 来代表现在，如此一来，就只能用$\(X_{t+k}\)$来代表时间向后（ $\(k>0\)$ ）或向前（ $\(k<0\)$ ）推进了。
 
 ​		
 ​		
-​	
-​	
-​		
-​			
-​				
-​					Macroeconomic models and data are dynamic – we observe realizations of variables at points in
-time. Most of macro (with the exception of some growth models and asset pricing models) models
-time as discreet. Let Xt denote some variable (either endogenous or exogenous, control or state).
-This notation refers to the realization of the variable at date t. Xt−1 refers to the realized value
-on period before t, Xt+k the realized value k periods subsequent to t, and so on. Think of these
-time indexes as representing integers. People flip back and forth on timing notations, and I do
-the same (sorry). Sometimes, we think of period 0 as being the “present” and move time forward;
-then Xt for t = 0, 1, 2, ... represents realizations of the variable in the present (period 0) and going
-forward. Other times, we think of period t as being the present; here we have Xt+k as representing
-realizations of X either moving forward (k > 0), backward (k < 0), or in the present (k = 0).
+​
 
 
-​			
 ​		
 ​	
 
