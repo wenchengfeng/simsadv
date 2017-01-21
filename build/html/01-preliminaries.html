@@ -35,7 +35,7 @@
         <link rel="search" title="搜索" href="search.html"/>
     <link rel="top" title="advanced macro 0.1 文档" href="index.html"/>
         <link rel="next" title="两时期消费-储蓄模型" href="02-consumption_saving.html"/>
-        <link rel="prev" title="高级宏观经济学学习笔记" href="index.html"/> 
+        <link rel="prev" title="宏观经济学学习笔记 inspired by Eric Sims" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -169,8 +169,38 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。</p>
 <span class="math">\(E_tX_{t−k} = X_{t−k}\)</span>.</p>
 <p>对于两个任意的随机变量 <span class="math">\(Y\)</span> and
 <span class="math">\(Z\)</span>，根据迭代期望法则，
-<span class="math">\(E(Y ) =E(E(Y | Z))\)</span>。用文字表达的意思是，无条件期望 In
-words, this says that the unconditional expectation of</p>
+<span class="math">\(E(Y ) =E(E(Y | Z))\)</span>。用文字表达的意思是，条件期望的无条件期望是无条件期望。
+对于时间序列其含义如下：<span class="math">\( E_t(E_{t+1}(X_{t+2})) =E_tX_{t+2}\)</span>。
+再用文字表达的意思是，根据今天建立在对明天信息的条件猜想之上对今后两期的变量的条件猜想，恰恰就是基于今天的信息所能做出的最好猜想。（In
+other words, your best guess conditional on today’s information of your
+best guess conditional on tomorrow’s information of a variable two
+periods out from now is just your best guess based on today’s
+information.）</p>
+<p>理性预期超出了简单的期望值的概念，对预期施加了更多结构性要求，这个领域的贡献要追溯到
+Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期望
+(i)在平均意义上是正确的； (ii)
+在给定信息条件下，预测误差是不可预料的。换句话说，行为人只有在如下意义上才能建模出一致性的预期：（i）他们了解能够产生内生变量的模型并（ii）运用这些信息做出预测。这并不意味着行为人的预测不会出错。令
+<span class="math">\(E_tX_{t+k}\)</span>
+表示在时间<span class="math">\(t\)</span>根据可用信息做出的此后第<span class="math">\(k\)</span>期的<span class="math">\(X_t\)</span>的条件预测。预测误差是<span class="math">\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)</span>：即实现值减去期望值。一般情况下<span class="math">\(u_{t+k} \)</span>不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，<span class="math">\(E（u_{t+k}） =0\)</span>。这背后的逻辑非常简单：如果我们在平均意义上有了预测误差，就无法形成最优的预期。进一步说，预测误差与做出预测时所有已知信息的协方差应该为零，<span class="math">\(\text{cov}（u_{t+k}, Z_t） =0\)</span>。
+: just the realized value minus the expected value. In general, ut+k
+will not be zero, but it ought to be zero on average; i.e. the
+unconditional expectation of it should be zero: E(ut+k) = 0. The logic
+behind this is pretty simple: if you were making forecast errors on
+average, you aren’t forming expectations optimally. Furthermore, the
+covariance of the forecast error with anything known at the time the
+forecast is made should be zero: cov(ut+k, Zt) = 0 where Zt represents
+anything known at t. So rational expectations says that your forecasts
+are right on average and are unpredictable. Another way to think about
+this is that expectations are “optimal” in some sense – if you were
+wrong on average or predictably wrong (and being wrong mattered), you
+couldn’t be forming expectations optimally. Rational expectations is
+widely used in empirical work, in that it implies restrictions that can
+be used in econometrics. Note that rational expectation does not
+necessarily rule out informational frictions: we could restrict the
+information that agents have available to them. This may give rise to
+them appearing to violate rational expectations (their forecast errors
+are predictable), but only if one conditions on more information than
+the agents have at the time they make the forecast.</p>
 </div>
 </div>
 
@@ -184,7 +214,7 @@ words, this says that the unconditional expectation of</p>
         <a href="02-consumption_saving.html" class="btn btn-neutral float-right" title="两时期消费-储蓄模型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="高级宏观经济学学习笔记" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="宏观经济学学习笔记 inspired by Eric Sims" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
