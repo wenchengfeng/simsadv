@@ -29,9 +29,9 @@
 
 ## 3 随机过程
 
-如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程 (离散结果) 和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状对于预测该状态的未来值来说是充分统计量。例如，一量我们知道了$\(S_t\)$(当前状态)，此时再多了解到$\(S_{t-k}, (k>0)\)$并不能提供更多有关该状态在未来的预期演进。
+如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程 (离散结果) 和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状对于预测该状态的未来值来说是充分统计量。例如，一旦我们知道了$\(S_t\)$(当前状态)，此时再多了解到$\(S_{t-k}, (k>0)\)$并不能提供更多有关该状态在未来的预期演进。
 
-令$\( S ̄\)$ 为一$\( N × 1\)$ vector of possible realizations of some exogenous state, call it st. Let P be aN × N probability (or transition) matrix. Its elements are the the probabilities of transition fromstate i to state j between periods t and t + 1. Hence:
+令$\( S ̄\)$ 为一些外生变量的可能实现值$\(s_t\)$的$\( N × 1\)$ 阶向量vector of possible realizations of some exogenous state, call it st. Let P be aN × N probability (or transition) matrix. Its elements are the the probabilities of transition fromstate i to state j between periods t and t + 1. Hence:
 
 
 ​			
