@@ -44,5 +44,21 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 
 对于两个任意的随机变量 :math:`\(Y\)` and
 :math:`\(Z\)`\ ，根据迭代期望法则，
-:math:`\(E(Y ) =E(E(Y | Z))\)`\ 。用文字表达的意思是，无条件期望 In
-words, this says that the unconditional expectation of
+:math:`\(E(Y ) =E(E(Y | Z))\)`\ 。用文字表达的意思是，条件期望的无条件期望是无条件期望。
+对于时间序列其含义如下：\ :math:`\( E_t(E_{t+1}(X_{t+2})) =E_tX_{t+2}\)`\ 。
+再用文字表达的意思是，根据今天建立在对明天信息的条件猜想之上对今后两期的变量的条件猜想，恰恰就是基于今天的信息所能做出的最好猜想。（In
+other words, your best guess conditional on today’s information of your
+best guess conditional on tomorrow’s information of a variable two
+periods out from now is just your best guess based on today’s
+information.）
+
+理性预期超出了简单的期望值的概念，对预期施加了更多结构性要求，这个领域的贡献要追溯到
+Muth 和 Lucas。理性预期 Rational expectations says that expectations of
+future real-izations of relevant variables are (i) correct on average
+and (ii) the forecast errors are unpredictablegiven available
+information. In other words, agents have model consistent expectations
+in the sensethat they (i) know the model generating endogenous variables
+and (ii) use this knowledge to makeforecasts. This does not imply that
+agents do not make forecast errors. Let EtXt+k be the forecastof Xt k
+periods from now conditional on available information at time t. The
+forecast error is
