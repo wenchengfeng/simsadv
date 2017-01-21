@@ -88,8 +88,4 @@ ARMA
 
 ARMA(p,q) 过程可以写成如下形式
 
-\\begin{equation\*}
-
-s\_t=a+\\rho\ *1s*\ {t*1}+\\rho*\ 2s\_{t-2}+…+
-
-\\end{equation\*}
+:math:`s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+`

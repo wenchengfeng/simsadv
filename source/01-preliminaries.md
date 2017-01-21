@@ -41,11 +41,7 @@ ARMA 过程是构建在白噪声基础上的连续过程。白噪声过程（用
 
 ARMA(p,q) 过程可以写成如下形式
 
-\begin{equation*}
-
-s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+
-
-\end{equation*} 
+$$s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+$$
 
 
 ​			
