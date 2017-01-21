@@ -53,12 +53,26 @@ periods out from now is just your best guess based on today’s
 information.）
 
 理性预期超出了简单的期望值的概念，对预期施加了更多结构性要求，这个领域的贡献要追溯到
-Muth 和 Lucas。理性预期 Rational expectations says that expectations of
-future real-izations of relevant variables are (i) correct on average
-and (ii) the forecast errors are unpredictablegiven available
-information. In other words, agents have model consistent expectations
-in the sensethat they (i) know the model generating endogenous variables
-and (ii) use this knowledge to makeforecasts. This does not imply that
-agents do not make forecast errors. Let EtXt+k be the forecastof Xt k
-periods from now conditional on available information at time t. The
-forecast error is
+Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期望
+(i)在平均意义上是正确的； (ii)
+在给定信息条件下，预测误差是不可预料的。换句话说，行为人只有在如下意义上才能建模出一致性的预期：（i）他们了解能够产生内生变量的模型并（ii）运用这些信息做出预测。这并不意味着行为人的预测不会出错。令\ :math:` \(E_tX_{t+k}\) `
+表示在时间\ :math:`\(t\)`\ 根据可用信息做出的此后第\ :math:`\(k\)`\ 期的\ :math:`\(X_t\)`\ 的条件预测。预测误差是\ :math:`\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)`\ ：即实现值减去期望值。一般情况下\ :math:`\(u_{t+k} \)`\ 不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，\ :math:`\(E（u_{t+k}） =0\)`\ 。这背后的逻辑非常简单：如果
+: just the realized value minus the expected value. In general, ut+k
+will not be zero, but it ought to be zero on average; i.e. the
+unconditional expectation of it should be zero: E(ut+k) = 0. The logic
+behind this is pretty simple: if you were making forecast errors on
+average, you aren’t forming expectations optimally. Furthermore, the
+covariance of the forecast error with anything known at the time the
+forecast is made should be zero: cov(ut+k, Zt) = 0 where Zt represents
+anything known at t. So rational expectations says that your forecasts
+are right on average and are unpredictable. Another way to think about
+this is that expectations are “optimal” in some sense – if you were
+wrong on average or predictably wrong (and being wrong mattered), you
+couldn’t be forming expectations optimally. Rational expectations is
+widely used in empirical work, in that it implies restrictions that can
+be used in econometrics. Note that rational expectation does not
+necessarily rule out informational frictions: we could restrict the
+information that agents have available to them. This may give rise to
+them appearing to violate rational expectations (their forecast errors
+are predictable), but only if one conditions on more information than
+the agents have at the time they make the forecast.
