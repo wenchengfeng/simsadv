@@ -76,7 +76,7 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 阶概率矩阵。矩阵的元素是在时期\ :math:`\( t\)` 和\ :math:`\(t+1\)`
 之间由状态\ :math:`\(i\)` 到状态\ :math:`\( j\)` 转移的概率。因此，
 
-:math:`P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)`
+:math:`\(P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)\)`
 
 此处\ :math:`\(i\)` 和 :math:`\(j\)`
 是特定的\ :math:`\(\bar S\)`\ 的离散实现值。
