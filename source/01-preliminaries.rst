@@ -67,7 +67,8 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 ----------
 
 如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程
-(离散结果) or as an autoregressive moving average (ARMA) process. The
+(离散结果)
+和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状The
 so-called “Markov Prop-erty” says that the current state of a system is
 a sufficient statistic to forecast future values of thestate; e.g. once
 you know St (the current state), knowing\ :math:` S_{t−k}` for k > 0
