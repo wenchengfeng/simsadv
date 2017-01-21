@@ -31,22 +31,9 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.extlinks',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.autosummary',
-    #'numpydoc',
-    # 'ipython_directive',
-    # 'ipython_console_highlighting',
-    'IPython.sphinxext.ipython_console_highlighting',
-    'IPython.sphinxext.ipython_directive',
-    'matplotlib.sphinxext.only_directives',
-    'matplotlib.sphinxext.plot_directive',
-
+extensions = ['sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.mathjax'
     ]
 
 # Add any paths that contain templates here, relative to this directory.

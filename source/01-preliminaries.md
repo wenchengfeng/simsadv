@@ -29,9 +29,7 @@
 
 ## 3 随机过程
 
-如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。
-
-The two most common ways to model a stochastic process are as a Markov process (discreetoutcomes) or as an autoregressive moving average (ARMA) process. The so-called “Markov Prop-erty” says that the current state of a system is a sufficient statistic to forecast future values of thestate; e.g. once you know St (the current state), knowing St−k for k > 0 doesn’t tell you anythingabout the expected evolution of the state going forward.
+如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程 (离散结果) or as an autoregressive moving average (ARMA) process. The so-called “Markov Prop-erty” says that the current state of a system is a sufficient statistic to forecast future values of thestate; e.g. once you know St (the current state), knowing$ S_{t−k}$ for k > 0 doesn’t tell you anythingabout the expected evolution of the state going forward.
 
 Let S ̄ be a N × 1 vector of possible realizations of some exogenous state, call it st. Let P be aN × N probability (or transition) matrix. Its elements are the the probabilities of transition fromstate i to state j between periods t and t + 1. Hence:
 
