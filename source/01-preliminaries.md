@@ -31,7 +31,11 @@
 
 如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程 (离散结果) 和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状对于预测该状态的未来值来说是充分统计量。例如，一旦我们知道了$\(S_t\)$(当前状态)，此时再多了解到$\(S_{t-k}, (k>0)\)$并不能提供更多有关该状态在未来的预期演进。
 
-令$\( S ̄\)$ 为一些外生变量的可能实现值$\(s_t\)$的$\( N × 1\)$ 阶向量vector of possible realizations of some exogenous state, call it st. Let P be aN × N probability (or transition) matrix. Its elements are the the probabilities of transition fromstate i to state j between periods t and t + 1. Hence:
+令$\( S ̄\)$ 为一些外生变量的可能实现值$\(s_t\)$的$\( N × 1\)$ 阶向量，令$\( P\)$ 为$\( N × N\)$ 阶概率矩阵。矩阵的元素是在时期$\( t\)$ 和$\(t+1\)$ 之间由状态$\(i\)$ 到状态$\( j\)$ 转移的概率。因此，
+
+$$P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)$$
+
+此处$\(i\)$ 和  $\(j\)$ 是特定的$\(\bar S\)$的离散实现值。 
 
 
 ​			

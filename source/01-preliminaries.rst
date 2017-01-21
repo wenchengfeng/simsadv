@@ -72,7 +72,11 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 
 令\ :math:`\( S ̄\)`
 为一些外生变量的可能实现值\ :math:`\(s_t\)`\ 的\ :math:`\( N × 1\)`
-阶向量vector of possible realizations of some exogenous state, call it
-st. Let P be aN × N probability (or transition) matrix. Its elements are
-the the probabilities of transition fromstate i to state j between
-periods t and t + 1. Hence:
+阶向量，令\ :math:`\( P\)` 为\ :math:`\( N × N\)`
+阶概率矩阵。矩阵的元素是在时期\ :math:`\( t\)` 和\ :math:`\(t+1\)`
+之间由状态\ :math:`\(i\)` 到状态\ :math:`\( j\)` 转移的概率。因此，
+
+:math:`P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)`
+
+此处\ :math:`\(i\)` 和 :math:`\(j\)`
+是特定的\ :math:`\(\bar S\)`\ 的离散实现值。
