@@ -57,19 +57,12 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 (i)在平均意义上是正确的； (ii)
 在给定信息条件下，预测误差是不可预料的。换句话说，行为人只有在如下意义上才能建模出一致性的预期：（i）他们了解能够产生内生变量的模型并（ii）运用这些信息做出预测。这并不意味着行为人的预测不会出错。令
 :math:`\(E_tX_{t+k}\)`
-表示在时间\ :math:`\(t\)`\ 根据可用信息做出的此后第\ :math:`\(k\)`\ 期的\ :math:`\(X_t\)`\ 的条件预测。预测误差是\ :math:`\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)`\ ：即实现值减去期望值。一般情况下\ :math:`\(u_{t+k} \)`\ 不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，\ :math:`\(E（u_{t+k}） =0\)`\ 。这背后的逻辑非常简单：如果我们在平均意义上有了预测误差，就无法形成最优的预期。进一步说，预测误差与做出预测时所有已知信息的协方差应该为零，\ :math:`\(\text{cov}（u_{t+k}, Z_t） =0\)`\ ，此处\ :math:`\(Z_t\)`\ 代表在\ :math:`\t\)`\ 时期任意已知的信息。ents
-anything known at t. So rational expectations says that your forecasts
-are right on average and are unpredictable. Another way to think about
-this is that expectations are “optimal” in some sense – if you were
-wrong on average or predictably wrong (and being wrong mattered), you
-couldn’t be forming expectations optimally. Rational expectations is
-widely used in empirical work, in that it implies restrictions that can
-be used in econometrics. Note that rational expectation does not
-necessarily rule out informational frictions: we could restrict the
-information that agents have available to them. This may give rise to
-them appearing to violate rational expectations (their forecast errors
-are predictable), but only if one conditions on more information than
-the agents have at the time they make the forecast.
+表示在时间\ :math:`\(t\)`\ 根据可用信息做出的此后第\ :math:`\(k\)`\ 期的\ :math:`\(X_t\)`\ 的条件预测。预测误差是\ :math:`\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)`\ ：即实现值减去期望值。一般情况下\ :math:`\(u_{t+k} \)`\ 不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，\ :math:`\(E（u_{t+k}） =0\)`\ 。这背后的逻辑非常简单：如果我们在平均意义上有了预测误差，就无法形成最优的预期。进一步说，预测误差与做出预测时所有已知信息的协方差应该为零，\ :math:`\(\text{cov}（u_{t+k}, Z_t） =0\)`\ ，此处\ :math:`\(Z_t\)`\ 代表在\ :math:`\(t\)`\ 时期任意已知的信息。因此理性预期告诉我们预测在平均意义上是正确的且是不可预料的。换个角度可以在某种程度上将预期理解成“优化”—如果我们的预测在平均上是错误的或是可预料到的错误的（而且是关键的错误），我们就无法形成优化的预期。理性预期在经验研究中受到广泛应用，这意味着在计量经济学的应用中会受到一些限制
+。注意，理性预期并不一定排除信息摩擦：我们可以对行为人可获得的信息加以限制
+。 This may give rise to them appearing to violate rational expectations
+(their forecast errors are predictable), but only if one conditions on
+more information than the agents have at the time they make the
+forecast.
 
 --------------
 
