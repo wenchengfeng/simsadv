@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-高级宏观经济学学习笔记
+宏观经济学学习笔记 inspired by Eric Sims
 ==========================================
 
 .. toctree::

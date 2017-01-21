@@ -38,10 +38,11 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用\ :math:`\(E(X_t)\)`\ 代表\ :math:`\(X_t\)`\ 的无条件预期。所谓无条件是指行为人对系统的现状一无所知。
 :math:`\(E_tX_{t+k}\)`\ 代表对\ :math:`\(X\)`\ 的未来实现值的基于在时间\ :math:`\(t\)`
 所能获取的全部信息所做出的\ *条件*\ 预期。习惯上我们有\ :math:`\(E_tX_t = X_t\)`
-：这是因为\ :math:`\(X_t\)` 在时期 :math:`\(t\)`
+，这是因为\ :math:`\(X_t\)` 在时期 :math:`\(t\)`
 是已知的，其实现值已经没有不确定性。同理，我们还有
 :math:`\(E_tX_{t−k} = X_{t−k}\)`.
 
-对于两个任意的随机变量 :math:`\(Y\)` and :math:`\(Z\)`\ ，迭代期望法则
-the Law of Iterated Expectaions says that E(Y ) =E(E(Y \| Z)). In words,
-this says that the unconditional expectation of
+对于两个任意的随机变量 :math:`\(Y\)` and
+:math:`\(Z\)`\ ，根据迭代期望法则，
+:math:`\(E(Y ) =E(E(Y | Z))\)`\ 。用文字表达的意思是，无条件期望 In
+words, this says that the unconditional expectation of
