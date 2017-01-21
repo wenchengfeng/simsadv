@@ -33,11 +33,11 @@ available to them. This may give rise to them appearing to violate rational expe
 forecast errors are predictable), but only if one conditions on more information than the agents
 have at the time they make the forecast.
 
-
+---
 
 ## 3 随机过程
 
-As noted above, most macro models are driven by shocks to exogenous processes. We need tospecify properties of the stochastic processes that these exogenous states follow.
+如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。
 
 The two most common ways to model a stochastic process are as a Markov process (discreetoutcomes) or as an autoregressive moving average (ARMA) process. The so-called “Markov Prop-erty” says that the current state of a system is a sufficient statistic to forecast future values of thestate; e.g. once you know St (the current state), knowing St−k for k > 0 doesn’t tell you anythingabout the expected evolution of the state going forward.
 
