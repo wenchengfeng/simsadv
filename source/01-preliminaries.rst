@@ -26,7 +26,7 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 在描述宏观经济模型的变量时，我们还会遇到“状态”变量和“控制”变量两个术语。外生变量总是状态变量，但是内生变量则既可能是控制变量，也可能是状态变量。大致说来，“控制”变量是指其变量值是在模型中选择的，可以自由“跳跃”以响应新信息。状态变量的变量值则是行为人做决策时所需要的给定值。这些变量即可能是外生的（如一个最常用的术语，政府支出），也可能是内生的（资本存量、资产存量等）。状态变量是根据不同的控制变量要求而预先确定的：为了选择控制变量，需要预先知道状态变量。说到有些状态变量是内生的，是如下意义上的，即行为人当前的行为决策可能会影响未来状态变量的值，但是状态变量的当前值通常是已知的。
 
 宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令
-:math:`\(X_t\)`\ 代表变量（可以内生的也可以是外生的，可以控制变量也可以是状态变量）。这个符号表示变量在是时间
+:math:`\(X_t\)`\ 代表变量（可以是内生的也可以是外生的，可以是控制变量也可以是状态变量）。这个符号表示变量在是时间
 :math:`\(t\)`\ 的变量实现值。\ :math:`\(X_{t-1}\)`\ 则代表在\ :math:`\(t\)`\ 之前的一期变量实现值。\ :math:`\(X_{t+k}\)`
 代表在\ :math:`\(t\)`\ 时期之后第\ :math:`\(k\)`\ 期的变量实现值，依此类推。人们在使用时间标记符号时常常会有些翻来覆去的不一致情况，我也有这种情况（抱歉）。有时候，我们把时期0做为“现在”，然后向前推进时间；则在
 :math:`\(t=0,1,2,...\)`\ 时的\ :math:`\(X_t\)`\ 代表的是当前（时期0）和今后的变量的实现值。在名外一些时候，我们用时期
@@ -36,18 +36,12 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。
 
 
 宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用\ :math:`\(E(X_t)\)`\ 代表\ :math:`\(X_t\)`\ 的无条件预期。所谓无条件是指行为人对系统的现状一无所知。
-:math:`\(E_tX_{t+k}\)` Macroeconomic models are stochastic, in the sense
-that there is randomness in the realizationof variables. The stochastic
-nature of macro models comes in from exogenous variables, whichwe
-typically model as having a random component. Because these models are
-stochastic, andbecause agents are forward-looking, we need to worry
-about expectations. E(Xt) refers to theunconditional expectation of Xt.
-By unconditional I mean knowing nothing about the currentstate of the
-system. EtXt+k refers to expectation of future realizations of X
-conditional on allinformation known at time t. By convention we have
-that EtXt = Xt: since Xt is known in periodt, there is no uncertainty
-over its realization. Also, :math:`E_tX_{t−k} = X_{t−k}`.
+:math:`\(E_tX_{t+k}\)`\ 代表对\ :math:`\(X\)`\ 的未来实现值的基于在时间\ :math:`\(t\)`
+所能获取的全部信息所做出的\ *条件*\ 预期。习惯上我们有\ :math:`\(E_tX_t = X_t\)`
+：这是因为\ :math:`\(X_t\)` 在时期 :math:`\(t\)`
+是已知的，其实现值已经没有不确定性。同理，我们还有
+:math:`\(E_tX_{t−k} = X_{t−k}\)`.
 
-For two arbitrary random variables, :math:`Y` and :math:`Z`, the Law of
-Iterated Expectaions says that E(Y ) =E(E(Y \| Z)). In words, this says
-that the unconditional expectation of
+对于两个任意的随机变量 :math:`\(Y\)` and :math:`\(Z\)`\ ，迭代期望法则
+the Law of Iterated Expectaions says that E(Y ) =E(E(Y \| Z)). In words,
+this says that the unconditional expectation of

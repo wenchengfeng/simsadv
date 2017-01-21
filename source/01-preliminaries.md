@@ -16,13 +16,12 @@
 
 
 
-宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令 $\(X_t\)$代表变量（可以内生的也可以是外生的，可以控制变量也可以是状态变量）。这个符号表示变量在是时间 $\(t\)$的变量实现值。$\(X_{t-1}\)$则代表在$\(t\)$之前的一期变量实现值。$\(X_{t+k}\)$ 代表在$\(t\)$时期之后第$\(k\)$期的变量实现值，依此类推。人们在使用时间标记符号时常常会有些翻来覆去的不一致情况，我也有这种情况（抱歉）。有时候，我们把时期0做为“现在”，然后向前推进时间；则在 $\(t=0,1,2,...\)$时的$\(X_t\)$代表的是当前（时期0）和今后的变量的实现值。在名外一些时候，我们用时期 $\(t\)$ 来代表现在，如此一来，就只能用$\(X_{t+k}\)$来代表时间向后（ $\(k>0\)$ ）或向前（ $\(k<0\)$ ）推进了。
+宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令 $\(X_t\)$代表变量（可以是内生的也可以是外生的，可以是控制变量也可以是状态变量）。这个符号表示变量在是时间 $\(t\)$的变量实现值。$\(X_{t-1}\)$则代表在$\(t\)$之前的一期变量实现值。$\(X_{t+k}\)$ 代表在$\(t\)$时期之后第$\(k\)$期的变量实现值，依此类推。人们在使用时间标记符号时常常会有些翻来覆去的不一致情况，我也有这种情况（抱歉）。有时候，我们把时期0做为“现在”，然后向前推进时间；则在 $\(t=0,1,2,...\)$时的$\(X_t\)$代表的是当前（时期0）和今后的变量的实现值。在名外一些时候，我们用时期 $\(t\)$ 来代表现在，如此一来，就只能用$\(X_{t+k}\)$来代表时间向后（ $\(k>0\)$ ）或向前（ $\(k<0\)$ ）推进了。
 
 ​		
-宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用$\(E(X_t)\)$代表$\(X_t\)$的无条件预期。所谓无条件是指行为人对系统的现状一无所知。 $\(E_tX_{t+k}\)$		
-Macroeconomic models are stochastic, in the sense that there is randomness in the realizationof variables. The stochastic nature of macro models comes in from exogenous variables, whichwe typically model as having a random component. Because these models are stochastic, andbecause agents are forward-looking, we need to worry about expectations. E(Xt) refers to theunconditional expectation of Xt. By unconditional I mean knowing nothing about the currentstate of the system. EtXt+k refers to expectation of future realizations of X conditional on allinformation known at time t. By convention we have that EtXt = Xt: since Xt is known in periodt, there is no uncertainty over its realization. Also, $E_tX_{t−k} = X_{t−k}​$.
+宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用$\(E(X_t)\)$代表$\(X_t\)$的无条件预期。所谓无条件是指行为人对系统的现状一无所知。 $\(E_tX_{t+k}\)$代表对$\(X\)$的未来实现值的基于在时间$\(t\)$ 所能获取的全部信息所做出的*条件*预期。习惯上我们有$\(E_tX_t = X_t\)$ ：这是因为$\(X_t\)$ 在时期 $\(t\)$ 是已知的，其实现值已经没有不确定性。同理，我们还有 $\(E_tX_{t−k} = X_{t−k}\)$.
 
-For two arbitrary random variables, $Y$ and $Z$, the Law of Iterated Expectaions says that E(Y ) =E(E(Y | Z)). In words, this says that the unconditional expectation of 
+对于两个任意的随机变量 $\(Y\)$ and $\(Z\)$，迭代期望法则 the Law of Iterated Expectaions says that E(Y ) =E(E(Y | Z)). In words, this says that the unconditional expectation of 
 
 
 ​		
