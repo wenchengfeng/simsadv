@@ -186,7 +186,6 @@ AR(p)
    E_{t-1}X_{t+2}&=&0.9^3X_{t-1}\\
    &\vdots \\
    E_{t-1}X_{t+h}&=&0.9^{h+1}X_{t-1}
-
    \end{eqnarray}
 
 
@@ -200,7 +199,6 @@ AR(p)
    E_{t}X_{t+2}&=&0.9^3X_{t-1}+0.81\\
    &\vdots \\
    E_{t}X_{t+h}&=&0.9^{h}X_{t-1}
-
    \end{eqnarray}
 
 对这两个结果做差分
@@ -213,5 +211,4 @@ AR(p)
    E_{t}X_{t+2}-E_{t-1}X_{t+2}&=0.81\\
    &\vdots \\
    E_{t}X_{t+h}-E_{t-1}X_{t+h}&=0.9^h
-
    \end{eqnarray}
