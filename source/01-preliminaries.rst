@@ -185,7 +185,7 @@ AR(p)
    E_{t-1}X_{t+1}&=&0.9^2X_{t-1}\\
    E_{t-1}X_{t+2}&=&0.9^3X_{t-1}\\
    &\vdots \\
-   E_{t-1}X_{t+h}&=&0.9^{h+1}X_{t-1}\\
+   E_{t-1}X_{t+h}&=&0.9^{h+1}X_{t-1}
 
    \end{eqnarray}
 
@@ -194,24 +194,24 @@ AR(p)
 
 .. math::
 
-   \begin{array}\\
+   \begin{eqnarray}\\
    E_{t}X_t&=&0.9X_{t-1}+1\\
    E_{t}X_{t+1}&=&0.9^2X_{t-1}+0.9\\
    E_{t}X_{t+2}&=&0.9^3X_{t-1}+0.81\\
    &\vdots \\
-   E_{t}X_{t+h}&=&0.9^{h}X_{t-1}\\
+   E_{t}X_{t+h}&=&0.9^{h}X_{t-1}
 
-   \end{array}
+   \end{eqnarray}
 
 对这两个结果做差分
 
 .. math::
 
-   \begin{array}\\
+   \begin{eqnarray}\\
    E_{t}X_t-E_{t-1}X_{t}&=1\\
    E_{t}X_{t+1}-E_{t-1}X_{t+1}&=0.9\\
    E_{t}X_{t+2}-E_{t-1}X_{t+2}&=0.81\\
    &\vdots \\
-   E_{t}X_{t+h}-E_{t-1}X_{t+h}&=0.9^h\\
+   E_{t}X_{t+h}-E_{t-1}X_{t+h}&=0.9^h
 
-   \end{array}
+   \end{eqnarray}
