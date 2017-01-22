@@ -221,4 +221,22 @@ AR(p)
 较为常见的做法是将脉冲反应画出图来以做为分析的方式。对于这一过程，我们有如下脉冲图：
 
 .. figure:: /figures/sim0101.png
-   :alt:
+   :alt: 
+
+脉冲响应函数在本质上只是一个系数时间序列的移动平均的描点图。继续用前文AR(1)的例子，为了获得移动平均的表达式，做如下迭代
+
+.. math::
+
+   \begin{eqnarray}
+   X_t=0.9X_{t-1}+\varepsilon_t\\
+   X_t=0.9(0.9X_{t-2}+\varepsilon_{t-1})+\varepsilon_t=0.81X_{t-2}+0.9\varepsilon_{t-1}+\varepsilon_t\\
+   X_t=0.81(0.9X_{t-3}+\varepsilon_{t-2})+0.9\varepsilon_{t-1}+\varepsilon_t=0.9^3X_{t-3}+0.81\varepsilon_{t-2}+0.9\varepsilon_{t-1}+\varepsilon_t
+   \end{eqnarray}
+
+如果我们不断这样迭代下去，由于当\ :math:`\(k\)`\ 足够大时，\ :math:`\(0.9^k \to 0\)`\ ，所以我们得到
+
+.. math:: X_t=\varepsilon_t+0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots
+
+或者以求和符号的形式写为：
+
+.. math:: X_t=\sum_{j=0}^\infty 0.9^j \varepsilon_{t-j}
