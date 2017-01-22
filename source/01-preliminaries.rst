@@ -84,7 +84,8 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 ARMA
 过程是构建在白噪声基础上的连续过程。白噪声过程（用\ :math:`\(\varepsilon_t\)`\ 表示）具有均值为0的特性(\ :math:`\(E(\varepsilon_t)=0\)`)，并且具有已知的且非时变的方差(如
 :math:`\(\text{var}(\varepsilon_t)=\sigma^2\)`)，白噪声过程实现值与所有领先项和滞后项之间均不想关
-(如:math:`\(\text{cov}(\varepsilon_t, \varepsilon_{t+j})=0, \forall j\)`)。
+(如
+\:math:`\(\text{cov}(\varepsilon_t, \varepsilon_{t+j})=0, \forall j\)`)。
 
 ARMA(p,q) 过程可以写成如下形式
 
