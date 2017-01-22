@@ -240,3 +240,15 @@ AR(p)
 或者以求和符号的形式写为：
 
 .. math:: X_t=\sum_{j=0}^\infty 0.9^j \varepsilon_{t-j}
+
+将此与前文对比，我们看到脉冲响应函数只是移动平均“向前移动”的表达式。为了表明这一点，我们把前文所做按着取前向期望的方式再做一遍
+
+.. math::
+
+   \begin{eqnarray}
+   E_{t-1}X_t=0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots\\
+   E_{t-1}X_{t+1}=0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
+   E_{t-1}X_{t+2}=0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
+   \end{eqnarray}
+
+此处\ :math:`\(\varepsilon_t\)`\ 项没有出现，这是因为\ :math:`\(E_{t-1}\varepsilon_t=0\)`\ 。
