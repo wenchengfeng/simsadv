@@ -88,4 +88,4 @@ ARMA
 
 ARMA(p,q) 过程可以写成如下形式
 
-:math:`s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+`
+:math:`\(s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+\rho_ps_{t-p}+\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+…+\theta_q\varepsilon_{t-q}\)`
