@@ -189,5 +189,25 @@ E_{t-1}X_{t+1}=0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
 E_{t-1}X_{t+2}=0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
 \end{eqnarray}
 $$
-此处$\(\varepsilon_t\)$项没有出现，这是因为$\(E_{t-1}\varepsilon_t=0\)$。
+此处$\(\varepsilon_t\)$项没有出现，这是因为$\(E_{t-1}\varepsilon_t=0\)$。现在我们设定时期t的$\(\varepsilon_t\)$的实现值为1的前提下再做一遍（像前文做过的那样）
+$$
+\begin{eqnarray}
+E_{t}X_t=1+0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots\\
+E_{t}X_{t+1}=0.9+0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
+E_{t}X_{t+2}=0.81+0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
+\end{eqnarray}
+$$
+然后取两者之差构建脉冲反应函数：
+$$
+\begin{eqnarray}\\
+E_{t}X_t-E_{t-1}X_{t}&=1\\
+E_{t}X_{t+1}-E_{t-1}X_{t+1}&=0.9\\
+E_{t}X_{t+2}-E_{t-1}X_{t+2}&=0.81\\
+&\vdots \\
+E_{t}X_{t+h}-E_{t-1}X_{t+h}&=0.9^h
+\end{eqnarray}
+$$
+这与前文的情况完全相同。换句话说，h级脉冲响应就是滞后h级的MA的系数。从根本上说，我们在宏观中通常感兴趣的正是这个移动平均的表达，它告诉了我们初始的冲击（$\(\varepsilon\)$）会如何在不同层级上影响变量。估计和处理移动平均项是很难的（由于$\(\varepsilon\)$是直接观测到的，所以需要分布假设和最大似然估计）。估计和处理AR(p)过程则相对直接些—大多数情况下，最小二乘法（OLS）就是估计这类过程的具有一致性的估计方法。因此这表明我们可以通过估计AR模型并构建脉冲响应函数来获得时间序列的移动平均表达—不同层级（不同的h）的脉冲响应函数的系数就是同样滞后级的移动平均的系数。
+
+当然，我上面所做的隐含地假设了可以由AR过程获取移动平均的表达。有时候这是不太可能的，
 
