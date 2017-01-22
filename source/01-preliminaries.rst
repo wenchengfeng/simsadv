@@ -90,10 +90,65 @@ ARMA
 
 ARMA(p,q) 过程可以写成如下形式
 
-:math:`\(s_t=a+\rho_1s_{t_1}+\rho_2s_{t-2}+…+\rho_ps_{t-p}+\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+…+\theta_q\varepsilon_{t-q}\)`
+:math:`\(s_t=a+\rho_1s_{t-1}+\rho_2s_{t-2}+…+\rho_ps_{t-p}+\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+…+\theta_q\varepsilon_{t-q}\)`
 
-| 此处，\ :math:`\(p\)`\ 表示自回归滞后阶（滞后因变量数），\ :math:`\(q\)`
-  表示移动平均滞后阶（滞后白噪声项数）。ARMA过程并非唯一的—在某种条件下，我们可以在MA过程和AR过程之间反复进行。这意味着我们常常可以用拥有足够多滞后项的纯AR过程来近似MA项。因此，大多数时候我们都可以用持续足够长的AR（p）过程来近似ARMA过程。
-  AR（p）过程在形式上并一定具有前文讨论过的马尔可夫性质—已知\ :math:`\(s_t\)`
-  并不足以预测\ :math:`\(s_{t+1}\)`
-  ，我们还需要知道\ :math:`\(s_{t-1}\)`\ ， :math:`\(s_{t-2}\)` 等等。
+此处，\ :math:`\(p\)`\ 表示自回归滞后阶（滞后因变量数），\ :math:`\(q\)`
+表示移动平均滞后阶（滞后白噪声项数）。ARMA过程并非唯一的—在某种条件下，我们可以在MA过程和AR过程之间反复进行。这意味着我们常常可以用拥有足够多滞后项的纯AR过程来近似MA项。因此，大多数时候我们都可以用持续足够长的AR（p）过程来近似ARMA过程。
+AR（p）过程在形式上并一定具有前文讨论过的马尔可夫性质—已知\ :math:`\(s_t\)`
+并不足以预测\ :math:`\(s_{t+1}\)`
+，我们还需要知道\ :math:`\(s_{t-1}\)`\ ， :math:`\(s_{t-2}\)` 等等。
+但是结果是我们可以重新定义状态变量，将AR（p）写为VAR（1）(V代表向量)。具体地说，假如我们有如下随机过程（此处忽略常数项）
+
+
+:math:`\(s_t=\rho_1s_{t-1}+\rho_2s_{t-2}+\rho_3s_{t-3}+…+\rho_ps_{t-p}+\varepsilon_t\)`
+
+那么，我们定义一个向量
+
+.. math::
+
+   s_t=\begin{bmatrix}
+     s_t\\
+     s_{t-1}\\
+     s_{t-2}\\
+     \vdots\\
+     s_{t-p+1}
+   \end{bmatrix}
+
+我们可以将随机过程写为
+
+.. math::
+
+   \begin{bmatrix}
+     s_t\\
+     s_{t-1}\\
+     s_{t-2}\\
+     \vdots\\
+     s_{t-p+1}
+   \end{bmatrix}
+   =
+   \begin{pmatrix}
+   \rho_1&\rho_2&\rho_3&\cdots&\rho_p\\
+   1&0&0&\cdots& 0\\
+   0&1&0&\cdots& 0\\
+   \vdots&\vdots&\vdots&\cdots&\vdots\\
+   0&0&0&\cdots& 0
+   \end{pmatrix}
+   \begin{bmatrix}
+     s_{t-1}\\
+     s_{t-2}\\
+     s_{t-3}\\
+     \vdots\\
+     s_{t-p}
+   \end{bmatrix}
+   +
+   \begin{bmatrix}
+     \varepsilon_t\\
+     0\\
+     0\\
+     \vdots\\
+     0
+   \end{bmatrix}
+
+ 或者简单写成
+
+:math:`s_t=\Lambda s_{t-1}+\varepsilon_t`
