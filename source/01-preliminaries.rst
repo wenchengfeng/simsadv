@@ -316,7 +316,7 @@ AR(p)
 
 以下是变量“1和2”（分别对应\ :math:`\(\textbf{X}_t\)`\ 的行）对冲击“1和2”（分别对应冲击向量的行）的脉冲响应函数
 
-.. figure:: /Users/fengwencheng/CloudStation/simsadv/source/、figures/sims0102.png
+.. figure:: /figures/sims0102.png
    :alt: 
 
 有一个与脉冲响应函数相关的概念是方差分解。
