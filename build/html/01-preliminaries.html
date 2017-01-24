@@ -89,8 +89,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">预备知识</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">1. 导论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">2. 符号系统与预期</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">3 随机过程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">4. 脉冲响应函数和方差分解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3 随机过程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4. 脉冲响应函数和方差分解</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02-consumption_saving.html">两时期消费-储蓄模型</a></li>
@@ -152,8 +152,7 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。</p>
 <h2>2. 符号系统与预期<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>变量是某些可以（确定性地或随机地）改变的事物的实现。内生变量是指在模型“内部”决定的变量（即在均衡框架内根据决策规则通过优化问题推导出来的）。外生变量则是由模型“外部”决定的，通常是做为给定的因素。我们根据既定的外生变量，将其代入到模型中，模型运行的结果就是内生变量的实现。参数则是规制模型关系的数值（例如效用函数的曲度如何，决策行为人对未来效用流的折现倾向有多大，等等）。参数通常也被看作是外生且固定的，当然，模型中也可以设定参数为随机改变的，此时参数就变成是外生变量。我将采用拉丁字母（如
 <span class="math">\(X\)</span> ，<span class="math">\(Y\)</span>）来表示变量，而用希腊字母（如
-<span class="math">\(\alpha, \beta\)</span>
-）表示参数。我会尽量做到，只是可能偶尔会有些例外。</p>
+<span class="math">\(\alpha, \beta\)</span> ）表示参数。我会尽量做到，只是可能偶尔会有些例外。</p>
 <p>在描述宏观经济模型的变量时，我们还会遇到“状态”变量和“控制”变量两个术语。外生变量总是状态变量，但是内生变量则既可能是控制变量，也可能是状态变量。大致说来，“控制”变量是指其变量值是在模型中选择的，可以自由“跳跃”以响应新信息。状态变量的变量值则是行为人做决策时所需要的给定值。这些变量即可能是外生的（如一个最常用的术语，政府支出），也可能是内生的（资本存量、资产存量等）。状态变量是根据不同的控制变量要求而预先确定的：为了选择控制变量，需要预先知道状态变量。说到有些状态变量是内生的，是如下意义上的，即行为人当前的行为决策可能会影响未来状态变量的值，但是状态变量的当前值通常是已知的。</p>
 <p>宏观经济模型和数据是动态的—我们在某时间点上观测变量的实现值。大多数宏观模型的时间是离散的（某些增长模型和资产定价模型例外）。令
 <span class="math">\(X_t\)</span>代表变量（可以是内生的也可以是外生的，可以是控制变量也可以是状态变量）。这个符号表示变量在是时间
@@ -162,17 +161,19 @@ Critique），卢卡斯批评奠定了现代宏观经济学的基础。</p>
 <span class="math">\(t=0,1,2,...\)</span>时的<span class="math">\(X_t\)</span>代表的是当前（时期0）和今后的变量的实现值。在名外一些时候，我们用时期
 <span class="math">\(t\)</span>
 来代表现在，如此一来，就只能用<span class="math">\(X_{t+k}\)</span>来代表时间向后（
-<span class="math">\(k>0\)</span> ）或向前（ <span class="math">\(k<0\)</span> ）推进了。</p>
-<p>宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用<span class="math">\(E(X_t)\)</span>代表<span class="math">\(X_t\)</span>的无条件预期。所谓无条件是指行为人对系统的现状一无所知。
+<span class="math">\(k&gt;0\)</span> ）或向前（ <span class="math">\(k&lt;0\)</span> ）推进了。</p>
+<div class="line-block">
+<div class="line">​</div>
+<div class="line">宏观经济模型是随机的，即变量的实现值具有随机性。宏观模型的随机性本质源于外生变量，我们在建模时通常是将外生变量赋予随机性。由于模型是随机的，且行为人是前瞻性的，因此我们需要考虑预期问题。用<span class="math">\(E(X_t)\)</span>代表<span class="math">\(X_t\)</span>的无条件预期。所谓无条件是指行为人对系统的现状一无所知。
 <span class="math">\(E_tX_{t+k}\)</span>代表对<span class="math">\(X\)</span>的未来实现值的基于在时间<span class="math">\(t\)</span>
 所能获取的全部信息所做出的<em>条件</em>预期。习惯上我们有<span class="math">\(E_tX_t = X_t\)</span>
 ，这是因为<span class="math">\(X_t\)</span> 在时期 <span class="math">\(t\)</span>
 是已知的，其实现值已经没有不确定性。同理，我们还有
-<span class="math">\(E_tX_{t−k} = X_{t−k}\)</span>.</p>
-<p>对于两个任意的随机变量 <span class="math">\(Y\)</span> and
-<span class="math">\(Z\)</span>，根据迭代期望法则，
+<span class="math">\(E_tX_{t−k} = X_{t−k}\)</span>.</div>
+</div>
+<p>对于两个任意的随机变量 <span class="math">\(Y\)</span> and <span class="math">\(Z\)</span>，根据迭代期望法则，
 <span class="math">\(E(Y ) =E(E(Y | Z))\)</span>。用文字表达的意思是，条件期望的无条件期望是无条件期望。
-对于时间序列其含义如下：<span class="math">\( E_t(E_{t+1}(X_{t+2})) =E_tX_{t+2}\)</span>。
+对于时间序列其含义如下：$ E_t(E_{t+1}(X_{t+2})) =E_tX_{t+2}$。
 再用文字表达的意思是，根据今天建立在对明天信息的条件猜想之上对今后两期的变量的条件猜想，恰恰就是基于今天的信息所能做出的最好猜想。（In
 other words, your best guess conditional on today’s information of your
 best guess conditional on tomorrow’s information of a variable two
@@ -183,51 +184,56 @@ Muth 和 Lucas。理性预期告诉我们，相关变量的未来实现值的期
 (i)在平均意义上是正确的； (ii)
 在给定信息条件下，预测误差是不可预料的。换句话说，行为人只有在如下意义上才能建模出一致性的预期：（i）他们了解能够产生内生变量的模型并（ii）运用这些信息做出预测。这并不意味着行为人的预测不会出错。令
 <span class="math">\(E_tX_{t+k}\)</span>
-表示在时间<span class="math">\(t\)</span>根据可用信息做出的此后第<span class="math">\(k\)</span>期的<span class="math">\(X_t\)</span>的条件预测。预测误差是<span class="math">\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)</span>：即实现值减去期望值。一般情况下<span class="math">\(u_{t+k} \)</span>不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，<span class="math">\(E（u_{t+k}） =0\)</span>。这背后的逻辑非常简单：如果我们在平均意义上有了预测误差，就无法形成最优的预期。进一步说，预测误差与做出预测时所有已知信息的协方差应该为零，<span class="math">\(\text{cov}（u_{t+k}, Z_t） =0\)</span>，此处<span class="math">\(Z_t\)</span>代表在<span class="math">\(t\)</span>时期任意已知的信息。因此理性预期告诉我们预测在平均意义上是正确的且是不可预料的。换个角度可以在某种程度上将预期理解成“优化”—如果我们的预测在平均上是错误的或是可预料到的错误的（而且是关键的错误），我们就无法形成优化的预期。理性预期在经验研究中受到广泛应用，这意味着在计量经济学的应用中会受到一些限制
+表示在时间<span class="math">\(t\)</span>根据可用信息做出的此后第<span class="math">\(k\)</span>期的<span class="math">\(X_t\)</span>的条件预测。预测误差是<span class="math">\(u_{t+k} = X_{t+k} − E_tX_{t+k}\)</span>：即实现值减去期望值。一般情况下$u_{t+k}
+<span class="math">\(不会为零，但从平均意义上讲它应该为零，即它的无条件期望应该为零，\)</span>E（u_{t+k}）
+=0<span class="math">\(。这背后的逻辑非常简单：如果我们在平均意义上有了预测误差，就无法形成最优的预期。进一步说，预测误差与做出预测时所有已知信息的协方差应该为零，\)</span><a href="#id4"><span class="problematic" id="id5">:raw-latex:`\text{cov}`（u\_{t+k},
+Z\_t）
+=0\ :math:`</span></a>，此处`Z_t<span class="math">\(代表在\)</span>t$时期任意已知的信息。因此理性预期告诉我们预测在平均意义上是正确的且是不可预料的。换个角度可以在某种程度上将预期理解成“优化”—如果我们的预测在平均上是错误的或是可预料到的错误的（而且是关键的错误），我们就无法形成优化的预期。理性预期在经验研究中受到广泛应用，这意味着在计量经济学的应用中会受到一些限制
 。注意，理性预期并不一定排除信息摩擦：我们可以对行为人可获得的信息加以限制
 。这可能会导致行为人看起来似乎是违反了理性预期（他们的预测误差是可以预料到的了），但是只有在拥有了超出行为人在做出预测时所拥有的信息的情况下才成立。</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="id4">
-<h2>3 随机过程<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h2>3 随机过程<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>如上所述，大部分宏观模型都是由对外生变量冲击过程所驱动的。我们需要明确这些外生状态变量所遵循的随机过程的性质。刻画随机过程最常见的两种方式是马尔可夫（Markov）过程
 (离散结果)
-和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状对于预测该状态的未来值来说是充分统计量。例如，一旦我们知道了<span class="math">\(S_t\)</span>(当前状态)，此时再多了解到:math:<cite>(S_{t-k}, (k&gt;0))</cite>并不能提供更多有关该状态在未来的预期演进。</p>
-<p>令<span class="math">\( S ̄\)</span>
-为一些外生变量的可能实现值<span class="math">\(s_t\)</span>的<span class="math">\( N × 1\)</span>
-阶向量，令<span class="math">\( P\)</span> 为<span class="math">\( N × N\)</span>
-阶概率矩阵。矩阵的元素是在时期<span class="math">\( t\)</span> 和<span class="math">\(t+1\)</span>
-之间由状态<span class="math">\(i\)</span> 到状态<span class="math">\( j\)</span> 转移的概率。因此，</p>
-<p><span class="math">\(P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)\)</span></p>
+和自回归移动平均(ARMA)过程。所谓的马尔可夫性质是指，一个系统的现状对于预测该状态的未来值来说是充分统计量。例如，一旦我们知道了<span class="math">\(S_t\)</span>(当前状态)，此时再多了解到:math:<cite>S_{t-k}, (k&gt;0)</cite>并不能提供更多有关该状态在未来的预期演进。</p>
+<p>令$ S ̄$ 为一些外生变量的可能实现值<span class="math">\(s_t\)</span>的$ N × 1$ 阶向量，令$
+P$ 为$ N × N$ 阶概率矩阵。矩阵的元素是在时期$ t$ 和<span class="math">\(t+1\)</span>
+之间由状态<span class="math">\(i\)</span> 到状态$ j$ 转移的概率。因此，</p>
+<div class="math">
+\[P_{i，j}=\text{prob}(s_{t+1}=s_j|s_t=s_i)\]</div>
 <p>此处<span class="math">\(i\)</span> 和 <span class="math">\(j\)</span>
 是特定的<span class="math">\(\bar S\)</span>的离散实现值。用文字表达为，矩阵的行（用<span class="math">\(i\)</span>标示）代表当前状态，列（用<span class="math">\(j\)</span>标示）则表示站在状态<span class="math">\(i\)</span>来预期<span class="math">\(t+1\)</span>期可能出现的每一个可能状态的概率。所有的行合计一定为1，即经济系统在一下期会转换为某个可能的实现值的概率为1。很自然地，对角线上的元素上越大，随机过程越具有持续性。</p>
 <p>ARMA
 过程是构建在白噪声基础上的连续过程。白噪声过程（用<span class="math">\(\varepsilon_t\)</span>表示）具有均值为0的特性(<span class="math">\(E(\varepsilon_t)=0\)</span>)，并且具有已知的且非时变的方差(如
 <span class="math">\(\text{var}(\varepsilon_t)=\sigma^2\)</span>)，白噪声过程实现值与所有领先项和滞后项之间均不想关
-(如
-<span class="math">\(\text{cov}(\varepsilon_t, \varepsilon_{t+j})=0, \forall j\)</span>
+(如 <span class="math">\(\text{cov}(\varepsilon_t, \varepsilon_{t+j})=0, \forall j\)</span>
 )。</p>
 <p>ARMA(p,q) 过程可以写成如下形式</p>
-<p><span class="math">\(s_t=a+\rho_1s_{t-1}+\rho_2s_{t-2}+…+\rho_ps_{t-p}+\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+…+\theta_q\varepsilon_{t-q}\)</span></p>
-<p>此处，<span class="math">\(p\)</span>表示自回归滞后阶（滞后因变量数），<span class="math">\(q\)</span>
-表示移动平均滞后阶（滞后白噪声项数）。ARMA过程并非唯一的—在某种条件下，我们可以在MA过程和AR过程之间反复进行。这意味着我们常常可以用拥有足够多滞后项的纯AR过程来近似MA项。因此，大多数时候我们都可以用持续足够长的AR(p)过程来近似ARMA过程。
-AR(p)
-过程在形式上并一定具有前文讨论过的马尔可夫性质—已知<span class="math">\(s_t\)</span>
-并不足以预测<span class="math">\(s_{t+1}\)</span>
-，我们还需要知道<span class="math">\(s_{t-1}\)</span>， <span class="math">\(s_{t-2}\)</span> 等等。
-但是结果是我们可以重新定义状态变量，将AR(p)
-写为VAR(1)(V代表向量)。具体地说，假如我们有如下随机过程（此处忽略常数项）</p>
-<p><span class="math">\(s_t=\rho_1s_{t-1}+\rho_2s_{t-2}+\rho_3s_{t-3}+…+\rho_ps_{t-p}+\varepsilon_t\)</span></p>
+<div class="math">
+\[s_t=a+\rho_1s_{t-1}+\rho_2s_{t-2}+…+\rho_ps_{t-p}+\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+…+\theta_q\varepsilon_{t-q}\]</div>
+<div class="line-block">
+<div class="line">此处，<span class="math">\(p\)</span>表示自回归滞后阶（滞后因变量数），<span class="math">\(q\)</span>
+表示移动平均滞后阶（滞后白噪声项数）。ARMA过程并非唯一的—在某种条件下，我们可以在MA过程和AR过程之间反复进行。这意味着我们常常可以用拥有足够多滞后项的纯AR过程来近似MA项。因此，大多数时候我们都可以用持续足够长的AR(p)过程来近似ARMA过程。</div>
+<div class="line">​</div>
+<div class="line">AR(p) 过程在形式上并一定具有前文讨论过的马尔可夫性质—已知<span class="math">\(s_t\)</span>
+并不足以预测<span class="math">\(s_{t+1}\)</span> ，我们还需要知道<span class="math">\(s_{t-1}\)</span>，
+<span class="math">\(s_{t-2}\)</span> 等等。 但是结果是我们可以重新定义状态变量，将AR(p)
+写为VAR(1)(V代表向量)。具体地说，假如我们有如下随机过程（此处忽略常数项）</div>
+</div>
+<p>​</p>
+<div class="math">
+\[s_t=\rho_1s_{t-1}+\rho_2s_{t-2}+\rho_3s_{t-3}+…+\rho_ps_{t-p}+\varepsilon_t\]</div>
 <p>那么，我们定义一个向量</p>
 <div class="math">
-\[\begin{split}s_t=\begin{bmatrix}
-  s_t\\
-  s_{t-1}\\
-  s_{t-2}\\
-  \vdots\\
-  s_{t-p+1}
-\end{bmatrix}\end{split}\]</div>
-<p>我们可以将随机过程写为</p>
+\[ \begin{align}\begin{aligned}\begin{split}  s_t=\begin{bmatrix}
+    s_t\\
+    s_{t-1}\\
+    s_{t-2}\\
+    \vdots\\
+    s_{t-p+1}
+  \end{bmatrix}\end{split}\\我们可以将随机过程写为\end{aligned}\end{align} \]</div>
 <div class="math">
 \[\begin{split}\begin{bmatrix}
   s_t\\
@@ -260,18 +266,18 @@ AR(p)
   0
 \end{bmatrix}\end{split}\]</div>
 <p>或者简单写成</p>
-<p><span class="math">\(s_t=\Lambda s_{t-1}+\varepsilon_t\)</span></p>
+<div class="math">
+\[s_t=\Lambda s_{t-1}+\varepsilon_t\]</div>
 <p>此处<span class="math">\(\Lambda\)</span>代表前述矩阵的系数矩阵。将状态变量如此重新定义后，该过程就具有了马尔可夫性质。我们将会看到，拥有AR(1)的结构使得计算脉冲响应和方差分解都变得相当简易直接了。</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="id5">
-<h2>4. 脉冲响应函数和方差分解<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>脉冲响应函数被定义为变量（或变量的向量）的当前值与预期值对某一时点上冲击的实现值的反应而发生的变动。我们把冲击看作是外生变量的创新（或意外变动），这里的创新被刻画为白噪声。这个定久不依赖于外生变量或内生变量的任何特定过程。假定<span class="math">\(X_t\)</span>
+<div class="section" id="id7">
+<h2>4. 脉冲响应函数和方差分解<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>脉冲响应函数被定义为变量（或变量的向量）的当前值与预期值对某一时点上冲击的实现值的反应而发生的变动。我们把冲击看作是外生变量的创新（或意外变动），这里的创新被刻画为白噪声。这个定义不依赖于外生变量或内生变量的任何特定过程。假定<span class="math">\(X_t\)</span>
 是某种构建白噪声的单变量过程，脉冲响应函数就可以定义为：</p>
 <div class="math">
-\[\text{IRF}(h)=E_tX_{t+h}-E_{t-1}X_{t+h}|\varepsilon_t=e, h\geq 0\]</div>
-<p>此处<span class="math">\(e\)</span>
-是<span class="math">\(\varepsilon_t\)</span>的某一特定的实现值。常见的是计算对标准差冲击的脉冲响应函数，即在<span class="math">\(e=\sigma\)</span>时（<span class="math">\(\sigma\)</span>代表<span class="math">\(\varepsilon_t\)</span>的标准差
+\[ \begin{align}\begin{aligned}  \text{IRF}(h)=E_tX_{t+h}-E_{t-1}X_{t+h}|\varepsilon_t=e, h\geq 0\\此处\ :math:`e`\end{aligned}\end{align} \]</div>
+<p>是<span class="math">\(\varepsilon_t\)</span>的某一特定的实现值。常见的是计算对标准差冲击的脉冲响应函数，即在<span class="math">\(e=\sigma\)</span>时（<span class="math">\(\sigma\)</span>代表<span class="math">\(\varepsilon_t\)</span>的标准差
 ）。但是我们可以计算任意大小（或符号）的冲击的脉冲响应函数。如果过程是线性的，这没关系，脉冲响应函数并不依赖于冲击的大小（除了上下响应的幅度），符号也只会影响响应的符号。对于非线性过程，情况会不太一样。</p>
 <p>下面是一个AR(1)过程的例子：</p>
 <div class="math">
@@ -286,16 +292,15 @@ E_{t-1}X_{t+2}&amp;=&amp;0.9^3X_{t-1}\\
 &amp;\vdots \\
 E_{t-1}X_{t+h}&amp;=&amp;0.9^{h+1}X_{t-1}
 \end{eqnarray}\end{split}\]</div>
-<p>现在，我们计算在时间<span class="math">t</span>时冲击的实现值为1（等于标准差）时的期望值：</p>
+<p>现在，我们计算在时间<span class="math">\(t\)</span>时冲击的实现值为1（等于标准差）时的期望值：</p>
 <div class="math">
-\[\begin{split}\begin{eqnarray}\\
-E_{t}X_t&amp;=&amp;0.9X_{t-1}+1\\
-E_{t}X_{t+1}&amp;=&amp;0.9^2X_{t-1}+0.9\\
-E_{t}X_{t+2}&amp;=&amp;0.9^3X_{t-1}+0.81\\
-&amp;\vdots \\
-E_{t}X_{t+h}&amp;=&amp;0.9^{h}X_{t-1}
-\end{eqnarray}\end{split}\]</div>
-<p>对这两个结果做差分</p>
+\[ \begin{align}\begin{aligned}\begin{split}  \begin{eqnarray}\\
+  E_{t}X_t&amp;=&amp;0.9X_{t-1}+1\\
+  E_{t}X_{t+1}&amp;=&amp;0.9^2X_{t-1}+0.9\\
+  E_{t}X_{t+2}&amp;=&amp;0.9^3X_{t-1}+0.81\\
+  &amp;\vdots \\
+  E_{t}X_{t+h}&amp;=&amp;0.9^{h}X_{t-1}
+  \end{eqnarray}\end{split}\\对这两个结果做差分\end{aligned}\end{align} \]</div>
 <div class="math">
 \[\begin{split}\begin{eqnarray}\\
 E_{t}X_t-E_{t-1}X_{t}&amp;=1\\
@@ -309,9 +314,97 @@ E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
 冲击实现值的条件下的预测，将其与没有这个实现值时的预测进行比较。在本例中，<span class="math">\(Y_t\)</span>的脉冲响应只是<span class="math">\(X_t\)</span>
 的脉冲响应的一个比例（比例为<span class="math">\(\beta\)</span>）</p>
 <p>较为常见的做法是将脉冲反应画出图来以做为分析的方式。对于这一过程，我们有如下脉冲图：</p>
-<div class="figure">
-<img alt="" src="_images/sim0101.png" />
+<div class="figure" id="id8">
+<img alt="sim0101" src="_images/sim0101.png" />
+<p class="caption"><span class="caption-text">sim0101</span></p>
 </div>
+<p>脉冲响应函数在本质上只是一个系数时间序列的移动平均的描点图。继续用前文AR(1)的例子，为了获得移动平均的表达式，做如下迭代</p>
+<div class="math">
+\[\begin{split}\begin{eqnarray}
+X_t=0.9X_{t-1}+\varepsilon_t\\
+X_t=0.9(0.9X_{t-2}+\varepsilon_{t-1})+\varepsilon_t=0.81X_{t-2}+0.9\varepsilon_{t-1}+\varepsilon_t\\
+X_t=0.81(0.9X_{t-3}+\varepsilon_{t-2})+0.9\varepsilon_{t-1}+\varepsilon_t=0.9^3X_{t-3}+0.81\varepsilon_{t-2}+0.9\varepsilon_{t-1}+\varepsilon_t
+\end{eqnarray}\end{split}\]</div>
+<p>如果我们不断这样迭代下去，由于当<span class="math">\(k\)</span>足够大时，<span class="math">\(0.9^k \to 0\)</span>，所以我们得到</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}  X_t=\varepsilon_t+0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots\\或者以求和符号的形式写为：\end{aligned}\end{align} \]</div>
+<div class="math">
+\[X_t=\sum_{j=0}^\infty 0.9^j \varepsilon_{t-j}\]</div>
+<p>将此与前文对比，我们看到脉冲响应函数只是移动平均“向前移动”的表达式。为了表明这一点，我们把前文所做按着取前向期望的方式再做一遍</p>
+<div class="math">
+\[\begin{split}\begin{eqnarray}
+E_{t-1}X_t=0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots\\
+E_{t-1}X_{t+1}=0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
+E_{t-1}X_{t+2}=0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
+\end{eqnarray}\end{split}\]</div>
+<p>此处<span class="math">\(\varepsilon_t\)</span>项没有出现，这是因为<span class="math">\(E_{t-1}\varepsilon_t=0\)</span>。现在我们设定时期t的<span class="math">\(\varepsilon_t\)</span>的实现值为1的前提下再做一遍（像前文做过的那样）</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}\begin{split}  \begin{eqnarray}
+  E_{t}X_t=1+0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots\\
+  E_{t}X_{t+1}=0.9+0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
+  E_{t}X_{t+2}=0.81+0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
+  \end{eqnarray}\end{split}\\然后取两者之差构建脉冲反应函数：\end{aligned}\end{align} \]</div>
+<div class="math">
+\[\begin{split}\begin{eqnarray}\\
+E_{t}X_t-E_{t-1}X_{t}&amp;=1\\
+E_{t}X_{t+1}-E_{t-1}X_{t+1}&amp;=0.9\\
+E_{t}X_{t+2}-E_{t-1}X_{t+2}&amp;=0.81\\
+&amp;\vdots \\
+E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
+\end{eqnarray}\end{split}\]</div>
+<p>这与前文的情况完全相同。换句话说，h期脉冲响应就是滞后h期的MA的系数。从根本上说，我们在宏观中通常感兴趣的正是这个移动平均的表达，它告诉了我们初始的冲击（<span class="math">\(\varepsilon\)</span>）会如何在不同周期上影响变量。估计和处理移动平均项是很难的（由于<span class="math">\(\varepsilon\)</span>是直接观测到的，所以需要分布假设和最大似然估计）。估计和处理AR(p)过程则相对直接些—大多数情况下，最小二乘法（OLS）就是估计这类过程的具有一致性的估计方法。因此这表明我们可以通过估计AR模型并构建脉冲响应函数来获得时间序列的移动平均表达—不同时长（不同的h）的脉冲响应函数的系数就是同样滞后时长的移动平均的系数。</p>
+<p>当然，我上面所做的隐含地假设了可以由AR过程获取移动平均的表达。有时候这是不太可能的，这种情况我们称之为不可逆AR过程。在多变量的框架下，会有些有趣的经济机制会引起经济模型中出现这种情况。如无特别提醒可以不必对此过分担心。另外，在我们上面的处理过程中，我们是假设了一个简单的AR(1)过程，这个在构建脉冲响应的机制技巧上就相当简单。我们的随机过程可能会复杂得多，但脉冲响应函数的的一般性定义还是同样的。AR(p)过程可能看起来相当棘手，难以用手算出其脉冲响应函数，但是，如果还记得的话，前面我们说过可以将AR(p)过程写成VAR(1)，这使得计算脉冲响应函数变得相当直接明了。我们还可能会遇到非线性模型问题，这会使得问题复杂些，但并不会改变脉冲响应函数的一般性定义。为了在非线性模型中计算脉冲响应函数，我们将采用所谓“一般化脉冲响应函数”。这里要做的在本质上大体是由非线性模型中模拟数据以做出<span class="math">\(h\)</span>期的预测，我们要大量重复这一过程。然后再由同一模型中模拟数据，只是此时要根据某一特定冲击的实现值，接下来再由非线性模型中用模拟数据做出做出<span class="math">\(h\)</span>期的预测。再接下来将这些多次模拟的结果加以平均，由此可以得到<span class="math">\(E_tX_{t+k}\)</span>和<span class="math">\(E_{t-1}X_{t+k}\)</span>，然后计算二者的差。这一概念性框架给出了在时期<span class="math">\(t\)</span>某冲击实现值引起模型未来值的期望值的差异。后面我们还会涉及到这个问题。</p>
+<p>我们还可以构建多元过程的脉冲响应函数。假设我们有关于变量 <span class="math">\(X_t\)</span>
+的<span class="math">\(2\times 1\)</span>
+阶向量，该组变量遵循AR(1)过程，有两个不相关的白噪声（例如“冲击”）扰动：</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}\begin{split}  \textbf{X}_t=\textbf{A}\textbf{X}_{t-1}+\textbf{B}\begin{bmatrix}
+  \varepsilon_{1,t}\\
+  \varepsilon_{2,t}
+  \end{bmatrix}\end{split}\\矩阵\ :math:`\textbf{B}`\end{aligned}\end{align} \]</div>
+<p>是<span class="math">\(2\times 2\)</span>阶的。如果<span class="math">\(\textbf{B}\)</span>
+和<span class="math">\(\textbf{A}\)</span>
+的非对角线上元素都为0，那么这就是是个2自变量的AR(1)过程。不过，非对角线上的元素不为0的情况会有一些更有趣的反馈机制，既有来源于冲击的，也有源于变量的滞后期。从概念上讲，脉冲响应函数与以前的一样—只是在时期<span class="math">\(t\)</span>的冲击实现值所引起的是对变量的向量的预测。不过，因为现在有两个冲击
+，因此也会有两个不同的脉冲反应函数—每项冲击分别对应一个脉冲响应函数。脉冲响应函数也是一个向量—表明
+<span class="math">\(X_t\)</span>的两个元素如何随时间做出反应。由于我们已经把它写为了向量AR(1)过程，因此脉冲反应函数看起来基本上与标量时的情况是相同的。假设<span class="math">\(\varepsilon_{1,t}\)</span>和<span class="math">\(\varepsilon_{2,t}\)</span>
+发生了一个单位的冲击（设另一个为0），我们会有：</p>
+<div class="math">
+\[\begin{split}\text{IRF}_1(h)=A^{h-1}\textbf{B}(:,1)\\
+\text{IRF}_2(h)=A^{h-1}\textbf{B}(:,2)\end{split}\]</div>
+<p>为了计算这两个脉冲响应函数，我们以“冲击矩阵”的不同列为条件，试举一例如下，假设矩阵为</p>
+<div class="math">
+\[\begin{split}\textbf{A}=\begin{pmatrix}
+0.7&amp;0.2\\
+0.5&amp;0.3
+\end{pmatrix}\\
+\textbf{B}=\begin{pmatrix}
+1&amp;0.3\\
+-0.2&amp;1
+\end{pmatrix}\end{split}\]</div>
+<p>以下是变量“1和2”（分别对应<span class="math">\(\textbf{X}_t\)</span>的行）对冲击“1和2”（分别对应冲击向量的行）的脉冲响应函数</p>
+<div class="figure" id="id9">
+<img alt="sims0102" src="_images/sims0102.png" />
+<p class="caption"><span class="caption-text">sims0102</span></p>
+</div>
+<p>有一个与脉冲响应函数相关的概念是方差分解。方差分解告诉我们的是某变量（如<span class="math">\(\textbf{X}_t\)</span>）预测误差的方差中有多大比例是由不同的冲击和不同的冲击时长造成的。很自然地，方差分解就不是旨在为单变量模型、单一冲击（只有一个白噪声冲击）所构建的—因为这样的单变量模型中一个冲击就解释了全部时长周期内的全部预测误差。我将使用无条件方差分解这一术语来表明某一特定冲击在无条件的意义上解释了多少预测误差的方差，而条件方差分解则是表明某变量的预测误差中有多少可以在某一特定预测周期内得到解释。</p>
+<p>为简单起见，假设我们有一个单变量过程，可以写成MA的形式：</p>
+<div class="math">
+\[X_t=\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+\theta_3\varepsilon_{t-3}\]</div>
+<p>（利用方差的性质以及白噪声过程的方差是常数这一事实，可知）<span class="math">\(X_t\)</span>的方差是：</p>
+<div class="math">
+\[\text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma^2\]</div>
+<p>现在我们假设<span class="math">\(X_t\)</span>受到两个不同的白噪声过程<span class="math">\(\varepsilon_{1,t}\)</span>和<span class="math">\(\varepsilon_{2,t}\)</span>的冲击，这些冲击是独立的，方差分别为<span class="math">\(\sigma_i^2\)</span>
+(<span class="math">\(i=1, 2\)</span>)，我们将这一过程写为</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}  X_t=\varepsilon_{1，t}+\theta_1\varepsilon_{1, t-1}+\theta_2\varepsilon_{2,t-2}+\theta_3\varepsilon_{3, t-3}+\varepsilon_{2，t}+\alpha_1\varepsilon_{2，t-1}+\alpha_2\varepsilon_{2，t-2}+\alpha_3\varepsilon_{2，t-3}\\:math:`X_t`\ 的总方差是：\end{aligned}\end{align} \]</div>
+<div class="math">
+\[ \begin{align}\begin{aligned}  \text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2\\所谓无条件方差分解只是将总方差中分离出每一个冲击的比例，此例中我们有：\end{aligned}\end{align} \]</div>
+<div class="math">
+\[\begin{split}\text{var}(X_t|\varepsilon_{1,t})=\frac{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2}{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\\
+\text{var}(X_t|\varepsilon_{2,t})=\frac{((1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\end{split}\]</div>
+<p>显然，所有冲击比例之和必然为1。这一示例表明了每一个冲击在解释<span class="math">\(X_t\)</span>的波动中的重要性：这取决于冲击的“量级”（即方差）和系数。由于方差分解只是MA的系数的函数，因此它只包含脉冲响应函数，除此并无其他信息—它只是从不同的角度解读模型。</p>
+<p>由于我们采用的是简单的MA过程，此处计算方差（以及由此得出的方差比例）是较为简单的。对于更复杂的模型（如非线性模型），我们可以通过模拟的方式来计算无条件方差分解。我们可以对模型做多时期模拟，计算<span class="math">\(X_t\)</span>的方差。然后我们“关闭”冲击1（令其方差为0）再对模型加以模拟，计算<span class="math">\(X_t\)</span>的方差，再接下来重复处理冲击2，由此即可以计算出两个冲击的比例。</p>
+<p>为了计算不同预测周期时长的方差分解，我们需要计算预测误差。定义h期的预测误差为<span class="math">\(X_{t+h}-E_{t-1}X_{t+h}\)</span>，这是在第<span class="math">\(t\)</span>期观测冲击之前</p>
 </div>
 </div>
 
