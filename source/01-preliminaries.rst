@@ -324,3 +324,18 @@ AR(p)
 为简单起见，假设我们有一个单变量过程，可以写成MA的形式：
 
 .. math:: X_t=\varepsilon_t+\theta_1\varepsilon_{t-1}+\theta_2\varepsilon_{t-2}+\theta_3\varepsilon_{t-3}
+
+（利用方差的性质以及白噪声过程的方差是常数这一事实，可知）\ :math:`\(X_t\)`\ 的方差是：
+
+.. math:: \text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma^2
+
+现在我们假设\ :math:`\(X_t\)`\ 受到两个不同的白噪声过程\ :math:`\(\varepsilon_{1,t}\)`\ 和\ :math:`\(\varepsilon_{2,t}\)`\ 的冲击，这些冲击是独立的，方差分别为\ :math:`\(\sigma_i^2\)`
+(:math:`\(i=1, 2\)`)，我们将这一过程写为
+
+.. math:: X_t=\varepsilon_{1，t}+\theta_1\varepsilon_{1, t-1}+\theta_2\varepsilon_{2,t-2}+\theta_3\varepsilon_{3, t-3}+\varepsilon_{2，t}+\alpha_1\varepsilon_{2，t-1}+\alpha_2\varepsilon_{2，t-2}+\alpha_3\varepsilon_{2，t-3}
+
+:math:`\(X_t\)`\ 的总方差是：
+
+.. math:: \text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2
+
+无条件方差
