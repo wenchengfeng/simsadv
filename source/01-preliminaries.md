@@ -59,6 +59,8 @@ s_t=\begin{bmatrix}
   s_{t-p+1}
 \end{bmatrix}
 $$
+
+
 我们可以将随机过程写为
 $$
 \begin{bmatrix}
@@ -139,6 +141,8 @@ E_{t}X_{t+2}&=&0.9^3X_{t-1}+0.81\\
 E_{t}X_{t+h}&=&0.9^{h}X_{t-1}
 \end{eqnarray}
 $$
+
+
 对这两个结果做差分
 $$
 \begin{eqnarray}\\
@@ -167,6 +171,8 @@ $$
 $$
 X_t=\varepsilon_t+0.9\varepsilon_{t-1}+0.81\varepsilon_{t-2}+0.9^3\varepsilon_{t-3}+\cdots
 $$
+
+
 或者以求和符号的形式写为：
 
 
@@ -189,6 +195,8 @@ E_{t}X_{t+1}=0.9+0.81\varepsilon_{t-1}+0.9^3\varepsilon_{t-2}+\cdots\\
 E_{t}X_{t+2}=0.81+0.9^3\varepsilon_{t-1}+0.9^4\varepsilon_{t-2}+\cdots
 \end{eqnarray}
 $$
+
+
 然后取两者之差构建脉冲反应函数：
 $$
  \begin{eqnarray}\\
@@ -230,6 +238,8 @@ $$
 -0.2&1
 \end{pmatrix}
 $$
+
+
 以下是变量“1和2”（分别对应 $\textbf{X}_t$的行）对冲击“1和2”（分别对应冲击向量的行）的脉冲响应函数
 
 ![sims0102](/figures/sims0102.png)
@@ -258,6 +268,8 @@ $$
 $$
 \text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2
 $$
+
+
 所谓无条件方差分解只是将总方差中分离出每一个冲击的比例，此例中我们有：
 
 
