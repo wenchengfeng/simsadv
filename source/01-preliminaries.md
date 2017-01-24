@@ -264,4 +264,11 @@ $\(X_t\)$的总方差是：
 $$
 \text{var}(X_t)=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2
 $$
-无条件方差
+所谓无条件方差分解只是将总方差中分离出每一个冲击的比例，此例中我们有：
+
+
+$$
+\text{var}(X_t|\varepsilon_{1,t})=\frac{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2}{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\\
+\text{var}(X_t|\varepsilon_{2,t})=\frac{((1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
+$$
+显然，所有冲击比例之和必然为1。这一示例表明了
