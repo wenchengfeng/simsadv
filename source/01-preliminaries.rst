@@ -1,7 +1,3 @@
-.. role:: math(raw)
-   :format: html latex
-..
-
 预备知识
 ========
 
