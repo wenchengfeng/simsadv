@@ -352,9 +352,11 @@ $$
 
 $$
 h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\\
-h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
+h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
 $$
 
 
 
-对于这一特定过程来说，我们看到条件方差分解
+对于这一特定过程来说，我们看到在3个预测周期或以上的情况下条件方差分解与我们前面定义的无条件预测误差方差分解完全一样。这是因为我们把MA过程写成了有限项。对于更一般化的随机过程来说，无条件方差分解和条件方差分解只有在$h \to \infty$的限定下才是相同的。
+
+在实际操作中，如何计算更复杂的过程的方差分解 ？如我们在这些公式中所见，方差分解取决于冲击 的方差的移动平均项。由于脉冲响应函数就是移动平均项，我们可以首先计算一个标准偏差的冲击的脉冲响应函数来得到方差分解（做一个标准偏差的冲击很重要）。总

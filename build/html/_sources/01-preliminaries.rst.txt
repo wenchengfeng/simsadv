@@ -487,6 +487,6 @@ AR(p) 过程在形式上并一定具有前文讨论过的马尔可夫性质—�
 
 
    h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\\
-   h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
+   h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
 
 对于这一特定过程来说，我们看到条件方差分解
