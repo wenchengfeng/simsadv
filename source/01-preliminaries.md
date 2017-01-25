@@ -262,7 +262,7 @@ $$
 $$
 X_t=\varepsilon_{1，t}+\theta_1\varepsilon_{1, t-1}+\theta_2\varepsilon_{2,t-2}+\theta_3\varepsilon_{3, t-3}+\varepsilon_{2，t}+\alpha_1\varepsilon_{2，t-1}+\alpha_2\varepsilon_{2，t-2}+\alpha_3\varepsilon_{2，t-3}
 $$
- $X_t$的总方差是：
+$X_t$的总方差是：
 
 
 $$
@@ -283,4 +283,78 @@ $$
 
 为了计算不同预测周期时长的方差分解，我们需要计算预测误差。定义$h$期的预测误差为$X_{t+h}-E_{t-1}X_{t+h}$，这是在第$t$期观测冲击之前实现值和期望值之间的差分。
 
-继续用上述两个冲击来驱动这个MA过程，在$h=0$ 时的预测误差
+继续用上述两个冲击来驱动这个MA过程，在$h=0$ 时的预测误差可以按如下方式构建：
+$$
+E_{t-1}X_t=\theta_1\varepsilon_{1,t-1}+\theta_2\varepsilon_{1,t-2}+\theta_3\varepsilon_{1,t-3}+\alpha_1\varepsilon_{2, t-1}+\alpha_2\varepsilon_{2, t-2}+\alpha_3\varepsilon_{2, t-3}
+$$
+
+$$
+X_t=\varepsilon_{1,t}+\theta_1\varepsilon_{1,t-1}+\theta_2\varepsilon_{1,t-2}+\theta_3\varepsilon_{1,t-3}+\varepsilon_{2,t}+\alpha_1\varepsilon_{2, t-1}+\alpha_2\varepsilon_{2, t-2}+\alpha_3\varepsilon_{2, t-3}
+$$
+
+二者的差恰好是
+$$
+X_t-E_{t-1}X_t=\varepsilon_{1,t}+\varepsilon_{2,t}
+$$
+
+
+现在我们再计算$h=1$时的预测误差
+$$
+E_{t-1}X_{t+1}=\theta_2\varepsilon_{1,t-1}+\theta_3\varepsilon_{1,t-2}+\alpha_2\varepsilon_{2, t-1}+\alpha_3\varepsilon_{2, t-2}
+$$
+
+$$
+X_{t+1}=\varepsilon_{1,t+1}+\theta_1\varepsilon_{1,t}+\theta_2\varepsilon_{1,t-1}+\theta_3\varepsilon_{1,t-2}+\varepsilon_{2,t+1}+\alpha_1\varepsilon_{2, t}+\alpha_2\varepsilon_{2, t-1}+\alpha_3\varepsilon_{2, t-2}
+$$
+
+二者的差是
+$$
+X_{t+1}-E_{t-1}X_{t+1}=\varepsilon_{1,t+1}+\theta_1\varepsilon_{1,t}+\varepsilon_{2,t+1}+\alpha_1\varepsilon_{2,t}
+$$
+
+
+与此相似地，我们可以得到$h=2$时预测误差的差分
+$$
+X_{t+2}-E_{t-1}X_{t+2}=\varepsilon_{1,t+2}+\theta_1\varepsilon_{1,t+1}+\theta_2\varepsilon_{1,t}+\varepsilon_{2,t+1}+\alpha_1\varepsilon_{2,t+1}+\alpha_2\varepsilon_{2,t}
+$$
+
+
+由于$t-1$时刻预测3期或3期以上为0，所以对于任意的$h\geq 3$，预测误差是如下过程
+$$
+X_{t+h}-E_{t-1}X_{t+h}=\varepsilon_{1,t+h}+\theta_1\varepsilon_{1,t+h-1}+\theta_2\varepsilon_{1,t+h-2}+\theta_3\varepsilon_{1,t+h-3}+\varepsilon_{2,t+h}+\alpha_1\varepsilon_{2,t+h-1}+\alpha_2\varepsilon_{2,t+h-2}+\alpha_3\varepsilon_{t+h-3}
+$$
+
+
+对每一时长周期的预测误差取其方差：
+$$
+h=0: \text{var}(X_t-E_{t-1}X_t)=\sigma_1^2+\sigma_2^2 \\
+h=1: \text{var}(X_{t+1}-E_{t-1}X_{t+1})=(1+\theta_1^2)\sigma_1^2+(1+\alpha_1^2)\sigma_2^2\\
+h=2: \text{var}(X_{t+2}-E_{t-1}X_{t+2})=(1+\theta_1^2+\theta_2^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2)\sigma_2^2\\
+h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h})=(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2
+$$
+
+
+方差分解仍然是计算比例，只是在不同的时长周期上：
+$$
+\text{var}(X_t-E_{t-1}X_t|\varepsilon_1)=\frac{\sigma_1^2}{\sigma_1^2+\sigma_2^2} \\
+\text{var}(X_t-E_{t-1}X_t|\varepsilon_2)=\frac{\sigma_2^2}{\sigma_1^2+\sigma_2^2}
+$$
+
+$$
+\text{var}(X_{t+1}-E_{t-1}X_{t+1}|\varepsilon_1)=\frac{(1+\theta_1^2)\sigma_1^2}{(1+\theta_1^2)\sigma_1^2+(1+\alpha_1^2)\sigma_2^2}\\
+\text{var}(X_{t+1}-E_{t-1}X_{t+1}|\varepsilon_2)=\frac{(1+\alpha_1^2)\sigma_2^2}{(1+\theta_1^2)\sigma_1^2+(1+\alpha_1^2)\sigma_2^2}\\
+$$
+
+$$
+\text{var}(X_{t+2}-E_{t-1}X_{t+2}|\varepsilon_1)=\frac{(1+\theta_1^2+\theta_2^2)\sigma_1^2}{(1+\theta_1^2++\theta_2^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2)\sigma_2^2}\\
+\text{var}(X_{t+2}-E_{t-1}X_{t+2}|\varepsilon_2)=\frac{((1+\alpha_1^2+\alpha_2^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2)\sigma_2^2}
+$$
+
+$$
+h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\theta_1^2+\theta_2^2+\theta_3^2)\sigma_1^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}\\
+h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_1)=\frac{(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}{(1+\theta_1^2++\theta_2^2+\theta_3^2)\sigma_1^2+(1+\alpha_1^2+\alpha_2^2+\alpha_3^2)\sigma_2^2}
+$$
+
+
+
+对于这一特定过程来说，我们看到条件方差分解
