@@ -500,8 +500,11 @@ h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\a
 \[X_t=X_t^s+X_t^c\]</div>
 <p>用某种标准界定出“平滑”部分，然后就可以将余下的部分归结为“周期”性的部分。类似移动平均法是最显而易见的做法—在每一个观测点上，在一个滚动窗口中对<span class="math">\(X_t\)</span>
 进行移动平均（滚动窗口可以采用多种形式，但我们在此假设其为双面型的，即取<span class="math">\(X_{t-k}\)</span>和<span class="math">\(X_{t+k}\)</span>的平均值）。这样我们会得到一组“平滑”的<span class="math">\(X_t\)</span>，用实际的<span class="math">\(X_t\)</span>减去此“平滑”部分，即可得到“周期”部分。</p>
-<p>Hodrick-Prescott滤波（简称HP滤波）是宏观经验研究中极为常用的，而且通常也仅做此滤波就够了。它还有一个线性时间趋势的特例。形式化来看，令<span class="math">\(\lambda\)</span>
-为外生</p>
+<p>Hodrick-Prescott滤波（简称HP滤波）是宏观经验研究中极为常用的，而且通常也仅做此滤波就够了。它还有一个线性时间趋势的特例。从形式化上看，令<span class="math">\(\lambda\)</span>
+为研究者预先选定的外生常量，HP滤波是选择一个趋势序列<span class="math">\(X_t^S\)</span>，求解如下最小化问题：</p>
+<div class="math">
+\[\min_{X_t^S} \sum_{t=1}^T(X_t-X_t^S)^2+\lambda \sum_{t=2}^{T-2}((X_{t+1}^S-X_t^S)-({X_t^S}-X_{t-1}^S))^2\]</div>
+<p>此式的基本思想是使得平滑部分的标准差的平方最小化，约束条件为</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="id8">
@@ -514,10 +517,11 @@ h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\a
 <h3>7.1 简单的消费储蓄模型<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>我们来考虑一个非常简单的两时期消费储蓄模型，该模型假定是固定利率且没有不确定性。家庭部门将收入流当作外生的，求解如下问题：</p>
 <div class="math">
-\[ \begin{align}\begin{aligned}\begin{split}  \max_{C_t, C_{t_
-  +1}} \frac{C_t^{1-\sigma}-1}{1-\sigma}+\beta\frac{C_{t+1}^{1-\sigma}-1}{1-\sigma}\\
-  s.t.\\
-  C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\\一阶条件或欧拉方程为\end{aligned}\end{align} \]</div>
+\[\begin{split}\max_{C_t, C_{t_
++1}} \frac{C_t^{1-\sigma}-1}{1-\sigma}+\beta\frac{C_{t+1}^{1-\sigma}-1}{1-\sigma}\\
+s.t.\\
+C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\]</div>
+<p>一阶条件或欧拉方程为</p>
 <div class="math">
 \[C_t^{-\sigma}=\beta(1+r)C_{t+1}^{-\sigma}\]</div>
 <p>这里有两个结构参数<span class="math">\(\beta\)</span>和<span class="math">\(\sigma\)</span>，这两个参数分别表示决策人对未来效用流的折现态度以及效用函数的曲度。我们假设<span class="math">\(\sigma=1\)</span></p>
