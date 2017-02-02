@@ -93,9 +93,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#id5">4. 脉冲响应函数和方差分解</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id6">5. 对数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">6. 滤波</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">7. 卢卡斯批评</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id13">7.1 简单的消费储蓄模型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">7.2 菲利普斯曲线模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">7. 卢卡斯批评</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">7.1 简单的消费储蓄模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">7.2 菲利普斯曲线模型</a></li>
 </ul>
 </li>
 </ul>
@@ -320,7 +320,7 @@ E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
 冲击实现值的条件下的预测，将其与没有这个实现值时的预测进行比较。在本例中，<span class="math">\(Y_t\)</span>的脉冲响应只是<span class="math">\(X_t\)</span>
 的脉冲响应的一个比例（比例为<span class="math">\(\beta\)</span>）</p>
 <p>较为常见的做法是将脉冲反应画出图来以做为分析的方式。对于这一过程，我们有如下脉冲图：</p>
-<div class="figure" id="id15">
+<div class="figure" id="id11">
 <img alt="sim0101" src="_images/sim0101.png" />
 <p class="caption"><span class="caption-text">sim0101</span></p>
 </div>
@@ -391,7 +391,7 @@ E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
 \end{pmatrix}\end{split}\]</div>
 <p>以下是变量“1和2”（分别对应
 <span class="math">\(\textbf{X}_t\)</span>的行）对冲击“1和2”（分别对应冲击向量的行）的脉冲响应函数</p>
-<div class="figure" id="id16">
+<div class="figure" id="id12">
 <img alt="sims0102" src="_images/sims0102.png" />
 <p class="caption"><span class="caption-text">sims0102</span></p>
 </div>
@@ -500,18 +500,18 @@ h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\a
 \[X_t=X_t^s+X_t^c\]</div>
 <p>用某种标准界定出“平滑”部分，然后就可以将余下的部分归结为“周期”性的部分。类似移动平均法是最显而易见的做法—在每一个观测点上，在一个滚动窗口中对<span class="math">\(X_t\)</span>
 进行移动平均（滚动窗口可以采用多种形式，但我们在此假设其为双面型的，即取<span class="math">\(X_{t-k}\)</span>和<span class="math">\(X_{t+k}\)</span>的平均值）。这样我们会得到一组“平滑”的<span class="math">\(X_t\)</span>，用实际的<span class="math">\(X_t\)</span>减去此“平滑”部分，即可得到“周期”部分。</p>
-<p>Hodrick-Prescott滤波（简称HP滤波）是宏观经验研究中极为常用的，而且通常也仅做此滤波就够了。它还有一个线性时间趋势的特例。形式化来看，令$:raw-latex:<a href="#id8"><span class="problematic" id="id9">`</span></a>lambda <a href="#id10"><span class="problematic" id="id11">`</span></a>$
+<p>Hodrick-Prescott滤波（简称HP滤波）是宏观经验研究中极为常用的，而且通常也仅做此滤波就够了。它还有一个线性时间趋势的特例。形式化来看，令<span class="math">\(\lambda\)</span>
 为外生</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="id12">
-<h2>7. 卢卡斯批评<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id8">
+<h2>7. 卢卡斯批评<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>卢卡斯批评（参考Lucas,
 1976）是形成现代宏观经济学的重要的哲学立足点。自凯恩斯到20世纪70年代中期的宏观经济学与现在的宏观经济学大不相同。在理论层面，各类教科书采用的都是IS-LM模型。IS-LM模型没有认真地考虑过行为人优化行为、动态或预期形成机制。在经验研究层面，学界通常采用“大规模”宏观计量模型，这些大规模宏观计量模型本质上是一些总量型变量的联立方程组，许多大型模型可能会有数百个变量。
 这些宏观计量模型建基于拟合和预测的基础之上，基本不太关注其基础理论或经济学。</p>
 <p>卢卡斯批评的要点在于</p>
-<div class="section" id="id13">
-<h3>7.1 简单的消费储蓄模型<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id9">
+<h3>7.1 简单的消费储蓄模型<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>我们来考虑一个非常简单的两时期消费储蓄模型，该模型假定是固定利率且没有不确定性。家庭部门将收入流当作外生的，求解如下问题：</p>
 <div class="math">
 \[ \begin{align}\begin{aligned}\begin{split}  \max_{C_t, C_{t_
@@ -522,8 +522,8 @@ h\geq 3: \text{var}(X_{t+h}-E_{t-1}X_{t+h}|\varepsilon_2)=\frac{(1+\alpha_1^2+\a
 \[C_t^{-\sigma}=\beta(1+r)C_{t+1}^{-\sigma}\]</div>
 <p>这里有两个结构参数<span class="math">\(\beta\)</span>和<span class="math">\(\sigma\)</span>，这两个参数分别表示决策人对未来效用流的折现态度以及效用函数的曲度。我们假设<span class="math">\(\sigma=1\)</span></p>
 </div>
-<div class="section" id="id14">
-<h3>7.2 菲利普斯曲线模型<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id10">
+<h3>7.2 菲利普斯曲线模型<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 </div>
 </div>
 </div>
