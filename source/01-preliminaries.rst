@@ -626,7 +626,7 @@ Hodrick-Prescott滤波（简称HP滤波）是宏观经验研究中极为常用�
 
    C_t = \frac{1}{1+\beta}\left(Y_t+\frac{Y_{t+1}}{1+r}\right)
 
- 此处的"边际消费倾向"(MPC)是\ :math:`C_t`\ 对\ :math:`Y_t`
+此处的"边际消费倾向"(MPC)是\ :math:`C_t`\ 对\ :math:`Y_t`
 的偏导，即\ :math:`\frac{1}{1+\beta}`\ 。
 
 7.2 菲利普斯曲线模型
