@@ -33,9 +33,7 @@
         <link rel="index" title="索引"
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
-    <link rel="top" title="advanced macro 0.1 文档" href="index.html"/>
-        <link rel="next" title="两时期消费-储蓄模型" href="02-consumption_saving.html"/>
-        <link rel="prev" title="宏观经济学学习笔记 inspired by Eric Sims" href="index.html"/> 
+    <link rel="top" title="advanced macro 0.1 文档" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -85,21 +83,8 @@
             
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">预备知识</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">1. 导论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2. 符号系统与预期</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">3 随机过程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">4. 脉冲响应函数和方差分解</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">5. 对数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">6. 滤波</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">7. 卢卡斯批评</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">7.1 简单的消费储蓄模型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">7.2 菲利普斯曲线模型</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01-preliminaries.html">预备知识</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-consumption_saving.html">两时期消费-储蓄模型</a></li>
 </ul>
 
@@ -135,7 +120,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/01-preliminaries.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/preliminaries.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -528,24 +513,11 @@ C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\]</div>
 \[C_t^{-\sigma}=\beta(1+r)C_{t+1}^{-\sigma}\]</div>
 <p>这里有两个结构性参数<span class="math">\(\beta\)</span>和<span class="math">\(\sigma\)</span>，这两个参数分别表示决策人对未来效用流的折现态度以及效用函数的曲度。我们假设<span class="math">\(\sigma=1\)</span>（根据洛比达法则，这意味着效用函数会退化成<span class="math">\(\ln C_t\)</span>），这样我们就可以得到类似如下形式的消费函数：</p>
 <div class="math">
-\[C_t = \frac{1}{1+\beta}\left(Y_t+\frac{Y_{t+1}}{1+r}\right)\]</div>
-<p>此处的&#8221;边际消费倾向&#8221;(MPC)是<span class="math">\(C_t\)</span>对<span class="math">\(Y_t\)</span>
-的偏导，即<span class="math">\(\frac{1}{1+\beta}\)</span>，这就是结构性参数的变形，因此我们就可以将边际消费倾向MPC看成实际上是结构性的。</p>
-<p>假设某计量经济学家估计了消费与收入的回归如下：</p>
-<div class="math">
-\[C_t=\alpha+\gamma Y_t +u_t\]</div>
-<p>该回归省略了<span class="math">\(Y_{t+1}\)</span>，在这个意义上它似乎有些设定错误，我们把它归入到误差项中了。如果当前收入与未来收入不相关，那么<span class="math">\(Y_t\)</span>
-与误差项也不相关，由此我们可以得到<span class="math">\(\gamma=\frac{1}{1+\beta}\)</span>(至少在样本足够大时是如此的)。但是，如果当前收入与未来收入是相关的（如收入的持续性）呢？这样就会有一个被忽略了的变量，<span class="math">\(Y_t\)</span>就是会与误差项正相关，这意味着得到的对<span class="math">\(\gamma\)</span>的估计是上偏的。</p>
-<p>假设过去收入的变化具有很强的持续性—当<span class="math">\(Y_t\)</span>变动时，<span class="math">\(Y_{t+1}\)</span>也会以差不多的幅度发生变动。根据消费理论得出的消费函数表明，在这种情况下消费对收入的变化大致会做出一比一的响应。假设计量经济学家继续估计上式的回归，并得到一个非常大的<span class="math">\(\gamma\)</span>值（比方说，<span class="math">\(\gamma\)</span>值接近1）。那么该计量经济学家就会提出如下政策建议：“边际消费倾向差不多为1，如果我们制定一项使人们收入增加（比方说减税）的政策，那么人们会差不多把增加的收入都花掉，这就会对总体经济活动产生较大的刺激作用！”
-于是政策制定者就会说：“好吧，我们在一个财务周期内减税1美元吧。”
-理论告诉我们，在一个周期内增加收入（减税就会有如此效果），人们的消费只会增加<span class="math">\(\frac{1}{1+\beta}\)</span>，如果<span class="math">\(\beta\)</span>接近1，那么人们大体上会消费掉减税额的<span class="math">\(1/2\)</span>，这将会小于由回归所得的估计结果，回归结果表明边际消费倾向MPC要高很多，而且接近于1。在本例中，在考虑收入变动只是暂时性的问题时，利用根据过去数据（在收入变动非常具有持久性的情况下）估计的收入和消费的相关性是不太有充分的信息的。</p>
+\[ \begin{align}\begin{aligned}  C_t = \frac{1}{1+\beta}\left(Y_t+\frac{Y_{t+1}}{1+r}\right)\\此处的&quot;边际消费倾向&quot;(MPC)是\ :math:`C_t`\ 对\ :math:`Y_t`\end{aligned}\end{align} \]</div>
+<p>的偏导，即<span class="math">\(\frac{1}{1+\beta}\)</span>。</p>
 </div>
 <div class="section" id="id10">
 <h3>7.2 菲利普斯曲线模型<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
-<p>我们来看看另外一个例子，也是卢卡斯所要批评的内容之一。本门课程稍后会看到，我们可以推导出一条“菲利普斯曲线”以表示经济活动、通货膨胀和预期通货膨胀的关系：</p>
-<div class="math">
-\[\pi_t=\theta(u_t-u^N)+\beta E_t\pi_{t+1}\]</div>
-<p>上式中，<span class="math">\(\theta\)</span>是系数，<span class="math">\(\beta\)</span>是折现因子（同前例中的一样)，<span class="math">\(\pi_t\)</span>是通货膨胀，</p>
 </div>
 </div>
 </div>
@@ -554,15 +526,6 @@ C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\]</div>
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="02-consumption_saving.html" class="btn btn-neutral float-right" title="两时期消费-储蓄模型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="宏观经济学学习笔记 inspired by Eric Sims" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
