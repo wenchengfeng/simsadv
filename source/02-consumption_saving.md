@@ -1,15 +1,20 @@
 # 两时期消费-储蓄模型
 
-## 导论
+## 1. 导论
 
-本讲讨论简单的两时期消费-储蓄问题。在该模型中，家庭部门根据外生的收入流进行消费和储蓄决策。$\alpha+\beta=\gamma$This note works through some simple two-period consumption-saving problems. In this model
-$$\sum_1^n=\frac{\gamma}{1+\rho}$$households receive an exogenous stream of income and have to decide how much to consume and
-save. Two periods is the minimum number of periods to make problems dynamic; it also turns
-out that you can usually split infinite horizon problems into two periods (the present and a future
-continuation value), so focusing on two periods does not cost us much.
+本讲讨论简单的两时期消费-储蓄问题。在该模型中，家庭部门根据外生的收入流进行消费和储蓄决策。要使所处理问题加入动态因素，最少需要两个时期；同时，我们通常也可以将无限期问题分割成两个时期（当前期和未来延续期）。因此，我们以两时期开展研究不会使问题变得太复杂。基本消费--储蓄模型的确是现代动态宏观经济学的核心模型，深入熟练地掌握该模型是非常重要的。
+
+这一简单的模型设定
+
+---
+
+## 2. 同一类型的行为人
+
+## 3. 两种类型的行为人
 
 
-​			
+
+
 ​		
 ​			
 ​	
