@@ -38,19 +38,21 @@
    C_t+q_tB_t\leq Y_t\\
    C_{t+1}\leq Y_{t+1}+B_t \nonumber
 
- 构造拉格朗日函数
+构造拉格朗日函数
 
 .. math::
 
 
    \mathcal{L}=\ln C_t+\beta \ln C_{t+1}+\lambda_1(Y_t-C_t-q_tB_t)+\lambda_2(Y_{t+1}+B_t-C_{t+1}) \nonumber
 
- 其一阶条件为：
+其一阶条件为：
 
 .. math::
 
 
+   \begin{equation}
    \frac{\partial \mathcal{L}}{\partial C_t}=0 \Leftrightarrow \frac{1}{C_t}=\lambda_1
+   \end{equation}
 
 .. math::
 
