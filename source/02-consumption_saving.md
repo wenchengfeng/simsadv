@@ -67,7 +67,13 @@ $$
 
 \frac{1}{2}
 
-\end{eqation}`
+\end{equation}`
+
+\begin{equation}
+
+\frac{1}{2}
+
+\end{equation}
 
 ## 3. 两种类型的行为人
 
