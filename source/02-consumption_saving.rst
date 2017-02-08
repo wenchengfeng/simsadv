@@ -80,11 +80,25 @@
 
 这一市场出清条件能成立吗？债券的价格\ :math:`q_t`\ 是保证这条件得以成立的条件。
 
-\`\\begin{equation}
+\`
 
-:raw-latex:`\frac{1}{2}`
+.. raw:: latex
 
-\\end{eqation}\`
+   \begin{equation}
+
+   \frac{1}{2}
+
+   \end{equation}
+
+\`
+
+.. raw:: latex
+
+   \begin{equation}
+
+   \frac{1}{2}
+
+   \end{equation}
 
 3. 两种类型的行为人
 -------------------
