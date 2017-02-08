@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>预备知识 &mdash; advanced macro 0.1 文档</title>
+  <title>第一讲 预备知识 &mdash; advanced macro 0.1 文档</title>
   
 
   
@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
     <link rel="top" title="advanced macro 0.1 文档" href="index.html"/>
-        <link rel="next" title="两时期消费-储蓄模型" href="02-consumption_saving.html"/>
+        <link rel="next" title="第二讲 两时期消费-储蓄模型" href="02-consumption_saving.html"/>
         <link rel="prev" title="宏观经济学学习笔记 inspired by Eric Sims" href="index.html"/> 
 
   
@@ -86,7 +86,7 @@
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">预备知识</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">第一讲 预备知识</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">1. 导论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">2. 符号系统与预期</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">3 随机过程</a></li>
@@ -96,11 +96,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#id8">7. 卢卡斯批评</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id9">7.1 简单的消费储蓄模型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id10">7.2 菲利普斯曲线模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">7.3 我们还需要计量经济学吗？</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="02-consumption_saving.html">两时期消费-储蓄模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-consumption_saving.html">第二讲 两时期消费-储蓄模型</a></li>
 </ul>
 
             
@@ -131,7 +132,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>预备知识</li>
+    <li>第一讲 预备知识</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -146,7 +147,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>预备知识<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>第一讲 预备知识<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
 <h2>1. 导论<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>在进一步学习课程之前，本讲提供一些基础的“预备知识”。宏观经济学既是动态的，又是随机的。动态意味着我们必须时时追踪变量随时间的变化，而随机则意味着我们需要研究预期。因此，本讲将首先介绍一下符号系统及有关预期运算规则。接下来我们将介绍在宏观经济学中用到的随机过程—马尔可夫（
@@ -320,7 +321,7 @@ E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
 冲击实现值的条件下的预测，将其与没有这个实现值时的预测进行比较。在本例中，<span class="math">\(Y_t\)</span>的脉冲响应只是<span class="math">\(X_t\)</span>
 的脉冲响应的一个比例（比例为<span class="math">\(\beta\)</span>）</p>
 <p>较为常见的做法是将脉冲反应画出图来以做为分析的方式。对于这一过程，我们有如下脉冲图：</p>
-<div class="figure" id="id11">
+<div class="figure" id="id12">
 <img alt="sim0101" src="_images/sim0101.png" />
 <p class="caption"><span class="caption-text">sim0101</span></p>
 </div>
@@ -391,7 +392,7 @@ E_{t}X_{t+h}-E_{t-1}X_{t+h}&amp;=0.9^h
 \end{pmatrix}\end{split}\]</div>
 <p>以下是变量“1和2”（分别对应
 <span class="math">\(\textbf{X}_t\)</span>的行）对冲击“1和2”（分别对应冲击向量的行）的脉冲响应函数</p>
-<div class="figure" id="id12">
+<div class="figure" id="id13">
 <img alt="sims0102" src="_images/sims0102.png" />
 <p class="caption"><span class="caption-text">sims0102</span></p>
 </div>
@@ -545,7 +546,30 @@ C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\]</div>
 <p>我们来看看另外一个例子，也是卢卡斯所要批评的内容之一。本门课程稍后会看到，我们可以推导出一条“菲利普斯曲线”以表示经济活动、通货膨胀和预期通货膨胀的关系：</p>
 <div class="math">
 \[\pi_t=\theta(u_t-u^N)+\beta E_t\pi_{t+1}\]</div>
-<p>上式中，<span class="math">\(\theta\)</span>是系数，<span class="math">\(\beta\)</span>是折现因子（同前例中的一样)，<span class="math">\(\pi_t\)</span>是通货膨胀，</p>
+<p>上式中，<span class="math">\(\theta\)</span>是系数，<span class="math">\(\beta\)</span>是折现因子（同前例中的一样)，<span class="math">\(\pi_t\)</span>是通货膨胀，<span class="math">\(E_t\pi_{t+1}\)</span>
+是预期通货膨胀，<span class="math">\(u_t\)</span>是失业率，<span class="math">\(u^N\)</span>是自然失业率（此处假定自然失业率是非时变的）。<span class="math">\(\theta\)</span>和<span class="math">\(\beta\)</span>都是结构性参数。</p>
+<p>在理性预期之前，人们不知道如何认真地处理预期。的确，当时许多模型都是静态的，所以也不用预期未来会发生什么。假如某计量经济学家估计出如下回归关系：</p>
+<div class="math">
+\[\pi_t=\xi(u_t-u^N)+\epsilon_t\]</div>
+<p>像上一节中的例子一样，根据基本理论，该回归关系也是设定错误—误差项中包含预期未来的通货膨胀。但是，假设从历史数据上看，预期通货膨胀相当稳定。这意味着对系数的估计不会有太大的偏差，我们就认为对<span class="math">\(\xi\)</span>的估计与真实的<span class="math">\(\theta\)</span>会非常接近。假如真实的<span class="math">\(\theta&lt;0\)</span>：通货膨胀和失业之间就存在负向关系。由此人们就会得出提高通货膨胀会减少失业的结论。于是计量经济学家就会对政策制定者提建议说：“我们提高通货膨胀吧，这样就会保持较低的失业！”
+真的会如此吗？</p>
+<p>会的，但是只是在较高的通货膨胀没有被整合到较高的通货膨胀预期时这个结论才能成立。如果人们稍加留意，他们就会预期到有更高的通货膨胀—即<span class="math">\(E_t\pi_{t+1}\)</span>会上升，这意味着<span class="math">\(u_t\)</span>不会下降到像简单的回归所预测的那么多。这再次说明，采用过去的相关关系来预测政策变化的效果可能会产生很大的误导后果。</p>
+</div>
+<div class="section" id="id11">
+<h3>7.3 我们还需要计量经济学吗？<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>卢卡斯批评的结论是我们要更加认真地对待经济理论&#8211;根据数据估计的相关关系（或回归系数）可能并read非是不随政策而变化的，因此在思考一些“反设事实”时基本没有什么用处。所谓“反设事实”是指我们在设想不同的政策框架下会发生什么后果。</p>
+<p>有些人（不恰当地）将卢卡斯批评理解为卢卡斯认为在宏观层面根本就不应该搞计量经济学。这么说其实有些言重了。卢卡斯批评是告诉我们在做计量分析时要认真对待经济理论，如果我们在没有经济理论保证的前提下进行计量分析（如简化式的计量经济学），要诚实面对潜在的疑虑并保持开放的态度。在上面给出的两个例子中，我们实际上还是在理论的指引下进行的回归设定&#8211;只是在我们运行的回归中有省略掉的变量。“理论”并不能告诉我们诸如<span class="math">\(\beta\)</span>或<span class="math">\(\theta\)</span>等结构性参数的具体值，这个工作就是计量经济学所致力于完成的。但是理论可以告诉我们要运行何种计量模型，我们可以施加何种限制等等。一旦我们对结构性参数得出了好的估计，就可以利用该模型去研究不同政策的效果了。</p>
+<p>本节实际的含义是主张理性预期是有用的。我们来看一下简单的两时期消费模型（为了让结论更明显，这次我们引入随机性）。理论告诉我们可以进行类似如下形式的回归：</p>
+<div class="math">
+\[C_t=\alpha_1Y_t+\alpha_2E_tY_{t+1}+\epsilon_t\]</div>
+<p>此处的问题在于我们并不一定能观测到<span class="math">\(E_tY_{t+1}\)</span>。不过，理性预期理论就可以告诉我们如何得到这个观测。具体来说，理性预期理论告诉我们<span class="math">\(E_tY_{t+1}=Y_{t+1}+u_{t+1}\)</span>，其中<span class="math">\(u_{t+1}\)</span>具有如下性质：(i)
+均值为0，(ii)
+与任何<span class="math">\(t\)</span>时期或更早时期已知的信息都不相关。因此，根据理性预期理论我们可以运行如下的回归：</p>
+<div class="math">
+\[C_t=\alpha_1Y_t+\alpha_2Y_{t+1}+v_t\]</div>
+<p>此处<span class="math">\(v_t\)</span>是一个复合误差项，它等于<span class="math">\(\epsilon_t+\alpha_2u_{t+1}\)</span>。由于<span class="math">\(Y_{t+1}\)</span>与<span class="math">\(u_{t+1}\)</span>相关，所以最小二乘法OLS并不适用。但是理性预期告诉我们，我们可以利用在时期<span class="math">\(t\)</span>或更早期时已知的信息检测<span class="math">\(Y_{t+1}\)</span>
+&#8211;理性预期告诉我们预测误差，<span class="math">\(u_{t+1}\)</span>，与任何<span class="math">\(t\)</span>时期或更早时期已知的信息都不相关，这使得<span class="math">\(t\)</span>时期及以前的信息都成为了有效的检测工具。我们可以对菲利普斯曲线公式做同样的处理，在公式右边将未来通货膨胀的实现值包括进来，并根据在时刻<span class="math">\(t\)</span>或更早时的某些信息对之加以检测。换句话说，对认真对待理性预期，通常会为我们提供回归模型中“关于误差项的理论”，因而对如何处理误差项提供一些指导。</p>
+<p>（第一讲结束，2017/2/7）</p>
 </div>
 </div>
 </div>
@@ -557,7 +581,7 @@ C_t+\frac{C_{t+1}}{1+r}=Y_t+\frac{Y_{t+1}}{1+r}\end{split}\]</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="02-consumption_saving.html" class="btn btn-neutral float-right" title="两时期消费-储蓄模型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="02-consumption_saving.html" class="btn btn-neutral float-right" title="第二讲 两时期消费-储蓄模型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="宏观经济学学习笔记 inspired by Eric Sims" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

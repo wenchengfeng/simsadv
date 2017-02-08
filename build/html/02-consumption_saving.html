@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>两时期消费-储蓄模型 &mdash; advanced macro 0.1 文档</title>
+  <title>第二讲 两时期消费-储蓄模型 &mdash; advanced macro 0.1 文档</title>
   
 
   
@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
     <link rel="top" title="advanced macro 0.1 文档" href="index.html"/>
-        <link rel="prev" title="预备知识" href="01-preliminaries.html"/> 
+        <link rel="prev" title="第一讲 预备知识" href="01-preliminaries.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -85,9 +85,11 @@
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="01-preliminaries.html">预备知识</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">两时期消费-储蓄模型</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">导论</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-preliminaries.html">第一讲 预备知识</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">第二讲 两时期消费-储蓄模型</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. 导论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. 一种类型的行为人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3. 两种类型的行为人</a></li>
 </ul>
 </li>
 </ul>
@@ -120,7 +122,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>两时期消费-储蓄模型</li>
+    <li>第二讲 两时期消费-储蓄模型</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -135,17 +137,53 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>两时期消费-储蓄模型<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>第二讲 两时期消费-储蓄模型<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
-<h2>导论<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>本讲讨论简单的两时期消费-储蓄问题。在该模型中，家庭部门根据外生的收入流进行消费和储蓄决策。This
-note works through some simple two-period consumption-saving problems.
-In this model households receive an exogenous stream of income and have
-to decide how much to consume and save. Two periods is the minimum
-number of periods to make problems dynamic; it also turns out that you
-can usually split infinite horizon problems into two periods (the
-present and a future continuation value), so focusing on two periods
-does not cost us much.</p>
+<h2>1. 导论<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>本讲讨论简单的两时期消费-储蓄问题。在该模型中，家庭部门根据外生的收入流进行消费和储蓄决策。要使所处理问题加入动态因素，最少需要两个时期；同时，我们通常也可以将无限期问题分割成两个时期（当前期和未来延续期）。因此，我们以两时期开展研究不会使问题变得太复杂。基本消费&#8211;储蓄模型的确是现代动态宏观经济学的核心模型，深入熟练地掌握该模型是非常重要的。</p>
+<p>这一简单的模型设定使得我们可以研究几个不同的现象。首先，这使我们可以在一个简单的框架内思考关于竞争性均衡的相关问题。
+我把此类经济称为“禀赋经济”—这是因为总收入是外生的（因此也是固定的），没有生产，在均衡时总消费必然等于总收入。因而，均衡价格调整就可能使我们此前所知道的所有消费平滑的动机失效—总量消费必须等于总收入，通过价格调整会使得它与行为人优化过程相一致。第二，设定模型为两时期使得我们可以思考异质性与风险分担的作用。如果市场是按如下方式定义的“完全”的：行为人的收入流是具有随机异质性的，但是他们的消费却独立于其异质的收入，与总禀赋完全相关。如此设定有助于促进宏观经济学中采用代表性行为人模型来研究消费。</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h2>2. 一种类型的行为人<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>假设有足够多的行为人，他们的偏好与禀赋完全相同。只要表现为价格接受者的行为人的人数足够多，我们就要以将行为人的人数标准化为1。</p>
+<p>该行为人在时期<span class="math">\(t\)</span>早上醒来，预期只生存两期，即<span class="math">\(t\)</span>期和<span class="math">\(t+1\)</span>期。行为人每期收到外生的确定性的禀赋收入<span class="math">\(Y_t\)</span>和<span class="math">\(Y_{t+1}\)</span>。行为人可以在第<span class="math">\(t\)</span>期通过买卖债券<span class="math">\(B_t\)</span>的形式来进行借款或储蓄，债券的价格是以消费单位计量的<span class="math">\(q_t\)</span>(即以此做为计价物)，<span class="math">\(B_t\)</span>单位的债券在第<span class="math">\(t+1\)</span>期会偿付<span class="math">\(B_t\)</span>单位的收入，<span class="math">\(B_t\)</span>可正可负，正值意味着行为人是储蓄者，负值意味着行为人是借款者。行为人的债券存量是生不带来，死不带去（即行为人在第<span class="math">\(t+1\)</span>期死去时不会选择留下正的财富遗产，虽然行为人可能会愿意死去时留下债务，但是我们要排除这种情况）。行为人在每期都会面临如下两个流量预算约束：</p>
+<div class="math">
+\[C_t+q_tB_t\leq Y_t  \nonumber\]</div>
+<div class="math">
+\[C_{t+1}\leq Y_{t+1}+B_t \nonumber\]</div>
+<p>行为人的目标是最大化其效用流的预期折现现值，其中两期的消费<span class="math">\(C_t\)</span>和<span class="math">\(C_{t+1}\)</span>分别以<span class="math">\(\ln C_t\)</span>和<span class="math">\(\ln C_{t+1}\)</span>的形式映射到效用函数中。行为人以<span class="math">\(0&lt;\beta&lt;1\)</span>为折现因子对未来的效用流进行折现。行为人的优化问题可以表示为：</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}\begin{split}  \max_{C_t, B_t, C_{t+1}} \ln C_t +\beta \ln C_{t+1}\\
+  s.t\\
+  C_t+q_tB_t\leq Y_t\\
+  C_{t+1}\leq Y_{t+1}+B_t \nonumber\end{split}\\构造拉格朗日函数\end{aligned}\end{align} \]</div>
+<div class="math">
+\[ \begin{align}\begin{aligned}  \mathcal{L}=\ln C_t+\beta \ln C_{t+1}+\lambda_1(Y_t-C_t-q_tB_t)+\lambda_2(Y_{t+1}+B_t-C_{t+1}) \nonumber\\其一阶条件为：\end{aligned}\end{align} \]</div>
+<div class="math">
+\[\frac{\partial \mathcal{L}}{\partial C_t}=0 \Leftrightarrow \frac{1}{C_t}=\lambda_1\]</div>
+<div class="math">
+\[\frac{\partial \mathcal{L}}{\partial C_{t+1}}=0 \Leftrightarrow \beta \frac{1}{C_{t+1}}=\lambda_2\]</div>
+<div class="math">
+\[\frac{\partial \mathcal{L}}{\partial B_t}=0 \Leftrightarrow q_t\lambda_1=\lambda_2\]</div>
+<p>将这3个公式整理，我们得到如下欧拉方程：</p>
+<div class="math">
+\[\begin{equation}
+q_t\frac{1}{C_t}=\beta\frac{1}{C_{t+1}}
+\end{equation}\]</div>
+<p>该条件的直觉解释是：储蓄减少一单位（即减少一单位<span class="math">\(B_t\)</span>）就会增加<span class="math">\(q_t\)</span>单位当前消费，其边际效用为<span class="math">\(q_t\frac{1}{C_t}\)</span>；而今天减少一单位储蓄则意味着明天少消费一单位，这使得明天的效用水平减少<span class="math">\(\frac{1}{C_{t+1}}\)</span>，将其折现到第<span class="math">\(t\)</span>期的</p>
+<p>效用，则为<span class="math">\(\beta \frac{1}{C_{t+1}}\)</span>。在取得最优时，多一点储蓄的额外收益与额外成本必然相等。</p>
+<p>上述所示问题就是决策问题：它得出一个最优条件，告诉我们行为人在给定价格下应如何行动。此时我们就可以为经济体定义一个竞争性均衡。竞争性均衡的一般性定义为，存在一组价格和资源配置体系，使得决策行为人可以采取最优行动（按照其决策规则行动），所有市场同时出清。此处的价格是<span class="math">\(q_t\)</span>，资源配置为<span class="math">\(C_t\)</span>，<span class="math">\(C_{t+1}\)</span>和
+<span class="math">\(B_t\)</span>。这个经济的市场出清条件是什么呢？答案是<span class="math">\(B_t=0\)</span>。为什么呢？所谓市场出清意味着对储蓄的需求必须等于借款供给。由于只有一种类型的行为人，如果行为人想要储蓄，就不会有借款供给。</p>
+</div>
+<div class="section" id="id4">
+<h2>3. 两种类型的行为人<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line">​</div>
+<div class="line">​</div>
+<div class="line">​</div>
+</div>
 </div>
 </div>
 
@@ -157,7 +195,7 @@ does not cost us much.</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="01-preliminaries.html" class="btn btn-neutral" title="预备知识" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="01-preliminaries.html" class="btn btn-neutral" title="第一讲 预备知识" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
