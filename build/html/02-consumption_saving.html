@@ -155,14 +155,18 @@
 \[C_{t+1}\leq Y_{t+1}+B_t \nonumber\]</div>
 <p>行为人的目标是最大化其效用流的预期折现现值，其中两期的消费<span class="math">\(C_t\)</span>和<span class="math">\(C_{t+1}\)</span>分别以<span class="math">\(\ln C_t\)</span>和<span class="math">\(\ln C_{t+1}\)</span>的形式映射到效用函数中。行为人以<span class="math">\(0&lt;\beta&lt;1\)</span>为折现因子对未来的效用流进行折现。行为人的优化问题可以表示为：</p>
 <div class="math">
-\[ \begin{align}\begin{aligned}\begin{split}  \max_{C_t, B_t, C_{t+1}} \ln C_t +\beta \ln C_{t+1}\\
-  s.t\\
-  C_t+q_tB_t\leq Y_t\\
-  C_{t+1}\leq Y_{t+1}+B_t \nonumber\end{split}\\构造拉格朗日函数\end{aligned}\end{align} \]</div>
+\[\begin{split}\max_{C_t, B_t, C_{t+1}} \ln C_t +\beta \ln C_{t+1}\\
+s.t\\
+C_t+q_tB_t\leq Y_t\\
+C_{t+1}\leq Y_{t+1}+B_t \nonumber\end{split}\]</div>
+<p>构造拉格朗日函数</p>
 <div class="math">
-\[ \begin{align}\begin{aligned}  \mathcal{L}=\ln C_t+\beta \ln C_{t+1}+\lambda_1(Y_t-C_t-q_tB_t)+\lambda_2(Y_{t+1}+B_t-C_{t+1}) \nonumber\\其一阶条件为：\end{aligned}\end{align} \]</div>
+\[\mathcal{L}=\ln C_t+\beta \ln C_{t+1}+\lambda_1(Y_t-C_t-q_tB_t)+\lambda_2(Y_{t+1}+B_t-C_{t+1}) \nonumber\]</div>
+<p>其一阶条件为：</p>
 <div class="math">
-\[\frac{\partial \mathcal{L}}{\partial C_t}=0 \Leftrightarrow \frac{1}{C_t}=\lambda_1\]</div>
+\[\begin{equation}
+\frac{\partial \mathcal{L}}{\partial C_t}=0 \Leftrightarrow \frac{1}{C_t}=\lambda_1
+\end{equation}\]</div>
 <div class="math">
 \[\frac{\partial \mathcal{L}}{\partial C_{t+1}}=0 \Leftrightarrow \beta \frac{1}{C_{t+1}}=\lambda_2\]</div>
 <div class="math">
@@ -172,10 +176,15 @@
 \[\begin{equation}
 q_t\frac{1}{C_t}=\beta\frac{1}{C_{t+1}}
 \end{equation}\]</div>
-<p>该条件的直觉解释是：储蓄减少一单位（即减少一单位<span class="math">\(B_t\)</span>）就会增加<span class="math">\(q_t\)</span>单位当前消费，其边际效用为<span class="math">\(q_t\frac{1}{C_t}\)</span>；而今天减少一单位储蓄则意味着明天少消费一单位，这使得明天的效用水平减少<span class="math">\(\frac{1}{C_{t+1}}\)</span>，将其折现到第<span class="math">\(t\)</span>期的</p>
-<p>效用，则为<span class="math">\(\beta \frac{1}{C_{t+1}}\)</span>。在取得最优时，多一点储蓄的额外收益与额外成本必然相等。</p>
+<p>该条件的直觉解释是：储蓄减少一单位（即减少一单位<span class="math">\(B_t\)</span>）就会增加<span class="math">\(q_t\)</span>单位当前消费，其边际效用为<span class="math">\(q_t\frac{1}{C_t}\)</span>；而今天减少一单位储蓄则意味着明天少消费一单位，这使得明天的效用水平减少<span class="math">\(\frac{1}{C_{t+1}}\)</span>，将其折现到第<span class="math">\(t\)</span>期的效用，则为<span class="math">\(\beta \frac{1}{C_{t+1}}\)</span>。在取得最优时，多一点储蓄的额外收益与额外成本必然相等。</p>
 <p>上述所示问题就是决策问题：它得出一个最优条件，告诉我们行为人在给定价格下应如何行动。此时我们就可以为经济体定义一个竞争性均衡。竞争性均衡的一般性定义为，存在一组价格和资源配置体系，使得决策行为人可以采取最优行动（按照其决策规则行动），所有市场同时出清。此处的价格是<span class="math">\(q_t\)</span>，资源配置为<span class="math">\(C_t\)</span>，<span class="math">\(C_{t+1}\)</span>和
-<span class="math">\(B_t\)</span>。这个经济的市场出清条件是什么呢？答案是<span class="math">\(B_t=0\)</span>。为什么呢？所谓市场出清意味着对储蓄的需求必须等于借款供给。由于只有一种类型的行为人，如果行为人想要储蓄，就不会有借款供给。</p>
+<span class="math">\(B_t\)</span>。这个经济的市场出清条件是什么呢？答案是<span class="math">\(B_t=0\)</span>。为什么呢？所谓市场出清意味着对储蓄的需求必须等于借款供给。由于只有一种类型的行为人，如果行为人想要储蓄，就不会有借款供给；与之相似，如果行为人想要借入资金，就不会提供储蓄供给。因此必然会有<span class="math">\(B_t=0\)</span>。与之等价的是，根据第一期的预算约束，这意味着必然有<span class="math">\(Y-t=C_t\)</span>：即所有收入都必然被消费掉。</p>
+<p>这一市场出清条件能成立吗？债券的价格<span class="math">\(q_t\)</span>是保证这条件得以成立的条件。竞争性均衡的一般性定义为存在一组价格和资源配置，以使得(i)
+资源配置可以求解出行为人的决策问题，（ii）所有市场出清。此处资源配置是<span class="math">\(C_t\)</span>和<span class="math">\(C_{t+1}\)</span>，价格是<span class="math">\(q_t\)</span>；决策问题前面已经给出，市场出清条件为<span class="math">\(B_t=0\)</span>。因为<span class="math">\(B_t=0\)</span>意味着<span class="math">\(C_t=Y_{t}\)</span>和<span class="math">\(C_{t+1}=Y_{t+1}\)</span>，<span class="math">\(Y_t\)</span>和<span class="math">\(Y_{t+1}\)</span>是外生的，我们把这些条件代入到欧拉方程中，就可以解得债券的均衡价格：</p>
+<div class="math">
+\[q_t=\beta \frac{Y_t}{Y_{t+1}}\]</div>
+<p>因此，均衡由价格<span class="math">\(q_t=\beta \frac{Y_t}{Y_{t+1}}\)</span>，配置<span class="math">\(C_t=Y_{t}\)</span>和<span class="math">\(C_{t+1}=Y_{t+1}\)</span>以及<span class="math">\(B_t=0\)</span>共同刻划出来。如果我们假设禀赋在所有时期都是常数，即<span class="math">\(Y_t=Y_{t+1}\)</span>，则我们就有<span class="math">\(q_t=\beta\)</span>。</p>
+<p>我们可以进行一些有趣的比较静态分析，将其与局部均衡下的永久收入假说加以比较。首先，我们来看一下如果当期收入<span class="math">\(Y_t\)</span>增加的效果。基本的永久收入假说理论表明，家庭将会进行跨期平滑消费—因此。他们将会把当前收入的增加额中储蓄起来一部分，以使得两期消费<span class="math">\(C_t\)</span>和<span class="math">\(C_{t+1}\)</span>都可以增加。但是我们根据市场出清条件可以知道，在均衡时，家庭部门无法实现这个计划，因为：</p>
 </div>
 <div class="section" id="id4">
 <h2>3. 两种类型的行为人<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
